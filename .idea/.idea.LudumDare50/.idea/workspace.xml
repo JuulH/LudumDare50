@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6cc296d7-0cc7-4d15-8160-0dc1a2584476" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/AssetStore.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Achievements.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Achievements/AchievementRules.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Achievements/AchievementRules.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Camera.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Camera/LevelLimits.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Camera/LevelLimits.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Camera/MMCameraEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Camera/MMCameraEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionAimObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionAimObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionAimWeaponAtMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionAimWeaponAtMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionChangeWeapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionChangeWeapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionCrouchStart.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionCrouchStart.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionCrouchStop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionCrouchStop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionDoNothing.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionDoNothing.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionFaceTowardsTarget2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionFaceTowardsTarget2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionInvertPatrolDirection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionInvertPatrolDirection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMMFeedbacks.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMMFeedbacks.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveAwayFromTarget2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveAwayFromTarget2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveAwayFromTarget3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveAwayFromTarget3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMovePatrol2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMovePatrol2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMovePatrol3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMovePatrol3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveRandomly2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveRandomly2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveRandomly3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveRandomly3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveRandomlyGrid.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveRandomlyGrid.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveTowardsTarget2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveTowardsTarget2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveTowardsTarget3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionMoveTowardsTarget3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionPathfinderToPatrol3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionPathfinderToPatrol3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionPathfinderToTarget3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionPathfinderToTarget3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionReload.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionReload.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionResetTarget.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionResetTarget.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionRotateConeOfVision2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionRotateConeOfVision2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionRotateTowardsTarget2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionRotateTowardsTarget2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionRotateTowardsTarget3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionRotateTowardsTarget3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionRunStart.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionRunStart.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionRunStop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionRunStop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionSelfDestruct.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionSelfDestruct.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionSetLastKnownPositionAsTarget.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionSetLastKnownPositionAsTarget.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionShoot2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionShoot2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionShoot3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionShoot3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionSwapBrain.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionSwapBrain.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionUnityEvents.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIActionUnityEvents.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetConeOfVision2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetConeOfVision2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetConeOfVision3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetConeOfVision3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetLine2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetLine2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetLine3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetLine3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetRadius2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetRadius2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetRadius3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDetectTargetRadius3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDistanceToTarget.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionDistanceToTarget.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionGrounded.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionGrounded.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionHealth.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionHealth.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionHit.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionHit.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionLineOfSightToTarget2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionLineOfSightToTarget2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionLineOfSightToTarget3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionLineOfSightToTarget3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionNextFrame.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionNextFrame.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionRandom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionRandom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionReloadNeeded.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionReloadNeeded.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionTargetFacingAI2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionTargetFacingAI2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionTargetIsAlive.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionTargetIsAlive.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionTargetIsNull.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionTargetIsNull.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionTimeInState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionTimeInState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionTimeSinceStart.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Advanced/AIDecisionTimeSinceStart.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Automation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Automation/MouseDrivenPathfinderAI3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Automation/MouseDrivenPathfinderAI3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Automation/PathedProjectile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Automation/PathedProjectile.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Automation/PathedProjectileSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Automation/PathedProjectileSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Automation/TimedSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/AI/Automation/TimedSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Animations/CharacterAnimationFeedbacks.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Animations/CharacterAnimationFeedbacks.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Animations/CharacterAnimationParametersInitializer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Animations/CharacterAnimationParametersInitializer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterButtonActivation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterButtonActivation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterConeOfVision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterConeOfVision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterDamageDash2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterDamageDash2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterDamageDash3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterDamageDash3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterDash2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterDash2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterDash3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterDash3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterFallDownHoles2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterFallDownHoles2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterGridMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterGridMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterHandleWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterHandleWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterInventory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterInventory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterJump2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterJump2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterJump3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterJump3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterOrientation3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterOrientation3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterPause.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterPause.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterPersistence.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterPersistence.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterRagdollOnDeath.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/CharacterAbilities/CharacterRagdollOnDeath.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Core/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Core/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Core/Health.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Core/Health.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Core/TopDownController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Core/TopDownController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Core/TopDownController2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Core/TopDownController2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Core/TopDownController3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Core/TopDownController3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Damage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Damage/DamageOnTouch.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Damage/DamageOnTouch.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Damage/KillZone.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Damage/KillZone.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Health.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Health/HealthAutoRefill.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Health/HealthAutoRefill.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/BouncyProjectile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/BouncyProjectile.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/HitscanWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/HitscanWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/MeleeWeapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/MeleeWeapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAim.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAim2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAim2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAim3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAim3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAutoAim.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAutoAim.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAutoAim2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAutoAim2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAutoAim3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAutoAim3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAutoAimRadiusCircle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponAutoAimRadiusCircle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponPreventShootingWhenCloseToWalls2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponPreventShootingWhenCloseToWalls2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponPreventShootingWhenCloseToWalls3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Characters/Weapons/WeaponPreventShootingWhenCloseToWalls3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/ButtonActivated.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/ButtonActivated.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/ButtonActivatedZone.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/ButtonActivatedZone.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/ButtonActivator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/ButtonActivator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/CrouchZone.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/CrouchZone.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/DashZone3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/DashZone3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/FallingPlatform2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/FallingPlatform2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/FallingPlatform3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/FallingPlatform3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/KeyOperatedZone.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/KeyOperatedZone.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/Magnetic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/Magnetic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/MagneticEnabler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/MagneticEnabler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/MovementZone.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/MovementZone.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/MovingPlatform2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/MovingPlatform2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/MovingPlatform3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/MovingPlatform3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/ProximityManaged.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/ProximityManaged.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/ProximityMine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/ProximityMine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/SurfaceModifier.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/SurfaceModifier.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/Switch.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/Switch.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/TimeZone.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Environment/TimeZone.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/AmmoDisplay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/AmmoDisplay.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/ButtonPrompt.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/ButtonPrompt.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/DialogueBox.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/DialogueBox.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/DialogueZone.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/DialogueZone.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/LevelSelector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/LevelSelector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/MusicSwitch.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/MusicSwitch.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/PauseButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/PauseButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/SfxSwitch.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/SfxSwitch.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/StartScreen.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/GUI/StartScreen.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/Coin.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/Coin.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/InventoryEngineChest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/InventoryEngineChest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/InventoryEngineHealth.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/InventoryEngineHealth.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/InventoryEngineKey.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/InventoryEngineKey.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/InventoryPickableItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/InventoryPickableItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/InventoryWeapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/InventoryWeapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/Loot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/Loot.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/PickableAction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/PickableAction.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/PickableDash2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/PickableDash2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/PickableItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/PickableItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/PickableWeapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/PickableWeapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/Stimpack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Items/Stimpack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/MMFeedbacks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/MMFeedbacks/MMFeedbackTopDownEngineFloatingText.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/MMFeedbacks/MMFeedbackTopDownEngineFloatingText.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/CharacterSwapManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/CharacterSwapManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/CharacterSwitchManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/CharacterSwitchManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/GUIManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/GUIManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/GridManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/GridManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/LayerManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/LayerManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/LevelManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/LevelManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/MultiplayerGUIManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/MultiplayerGUIManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/MultiplayerLevelManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/MultiplayerLevelManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/ProximityManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/ProximityManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/SoundManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Managers/SoundManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Procedural.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Procedural/TilemapLevelGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Procedural/TilemapLevelGenerator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Sound.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Sound/BackgroundMusic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Sound/BackgroundMusic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Sound/PersistentBackgroundMusic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Sound/PersistentBackgroundMusic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Spawn.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Spawn/AutoRespawn.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Spawn/AutoRespawn.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Spawn/CheckPoint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Spawn/CheckPoint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Spawn/FinishLevel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Spawn/FinishLevel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Spawn/GoToLevelEntryPoint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Spawn/GoToLevelEntryPoint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Spawn/Respawnable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TopDownEngine/Spawn/Respawnable.cs.meta" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.1.0/Unity.Mathematics/Noise/cellular2x2x2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile/DestroyAfterLifetime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/SelectableEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile/MoveForward.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile/CollidingProjectile.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="27F2OpUEeQl85uIgCcZAvcO3FKB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cc296d7-0cc7-4d15-8160-0dc1a2584476" name="Changes" comment="" />
+      <created>1648901490710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648901490710</updated>
+      <workItem from="1648901495160" duration="2687000" />
+      <workItem from="1648904855442" duration="5405000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
