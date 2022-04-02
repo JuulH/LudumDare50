@@ -7,8 +7,7 @@ namespace Player
     public class PlayerMovementController : MonoBehaviour
     {
         [SerializeField] private GameObject weaponAttachment;
-        [SerializeField] private GameObject projectile;
-        [SerializeField] private Transform projectileSpawnPos;
+        [SerializeField] private SpriteRenderer weaponSpriteRender;
         private Camera _cam;
 
 
@@ -20,11 +19,13 @@ namespace Player
         private Rigidbody2D _rb;
         public Vector2 dir;
         private Vector2 _mousePosition;
+        private SpriteRenderer _spriteRenderer;
 
         private void Start()
         {
             _animator = GetComponent<Animator>();
             _rb = GetComponent<Rigidbody2D>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
             dir = Vector2.zero;
             _cam = Camera.main;
         }
@@ -55,6 +56,18 @@ namespace Player
                 }
             }
 
+            Vector2 mouse = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);
+            if (mouse.x < Screen.width / 2)
+            {
+                _spriteRenderer.flipX = true;
+                weaponSpriteRender.flipY= true;
+            }
+            else if (mouse.x > Screen.width / 2)
+            {
+                _spriteRenderer.flipX = false;
+                weaponSpriteRender.flipY = false;
+            }
+
             dir.Normalize();
             if (dir == Vector2.zero)
             {
@@ -81,7 +94,5 @@ namespace Player
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             weaponAttachment.transform.rotation = rotation;
         }
-        
-        
     }
 }
