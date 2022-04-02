@@ -13,14 +13,14 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float attackCooldown = 1.5f;
     private float _timeSinceLastAttack = 999f;
 
-
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip attackSound;
     
     public bool isControlsEnabled;
+    private readonly Quaternion bulletRotationOffset = Quaternion.Euler(0,0,90); 
 
-    private Animator _animator;
-    private PlayerMovementController _playerMovementController;
+    // private Animator _animator;
+    // private PlayerMovementController _playerMovementController;
 
     
     // Update is called once per frame
@@ -42,7 +42,8 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            Instantiate(projectile, projectileSpawnPos.position, weaponAttachment.transform.rotation);
+            Quaternion bulletRotation = weaponAttachment.transform.rotation * bulletRotationOffset;
+            Instantiate(projectile, projectileSpawnPos.position, bulletRotation);
             _timeSinceLastAttack = 0;
         }
     }

@@ -56,6 +56,16 @@ namespace Player
             }
 
             dir.Normalize();
+            if (dir == Vector2.zero)
+            {
+                _animator.SetBool("IsIdle", true);
+                _animator.SetBool("IsMoving", false);
+            }
+            else
+            {
+                _animator.SetBool("IsIdle", false);
+                _animator.SetBool("IsMoving", true);
+            }
             // animator.SetFloat("Horizontal", dir.x);
             // animator.SetFloat("Vertical", dir.y);
             // animator.SetBool("IsMoving", dir.magnitude > 0);

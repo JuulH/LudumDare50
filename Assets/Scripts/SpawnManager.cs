@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private List<Transform> spawnPoints;
     [SerializeField] private GameObject enemy;
-    [SerializeField] private float spawnFrequency;
+    [SerializeField] private float initialSpawnFrequency;
+    [SerializeField] private float difficultyIncreaseFrequency;
     private float _spawnTimer;
 
 
@@ -13,7 +15,7 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
         _spawnTimer += Time.deltaTime;
-        if (_spawnTimer > spawnFrequency)
+        if (_spawnTimer > initialSpawnFrequency)
         {
             SpawnEnemy();
             _spawnTimer = 0;
