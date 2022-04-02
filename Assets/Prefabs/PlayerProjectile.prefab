@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7084041905386187589}
   - component: {fileID: 1002355213047020444}
   - component: {fileID: 6559119038948326375}
-  - component: {fileID: 4532594844266068371}
+  - component: {fileID: 5101153872365288804}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: PlayerProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTIme: 5
---- !u!114 &4532594844266068371
+--- !u!114 &5101153872365288804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
