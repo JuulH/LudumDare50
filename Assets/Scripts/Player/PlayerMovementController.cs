@@ -56,17 +56,7 @@ namespace Player
                 }
             }
 
-            Vector2 mouse = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);
-            if (mouse.x < Screen.width / 2)
-            {
-                _spriteRenderer.flipX = true;
-                weaponSpriteRender.flipY= true;
-            }
-            else if (mouse.x > Screen.width / 2)
-            {
-                _spriteRenderer.flipX = false;
-                weaponSpriteRender.flipY = false;
-            }
+            FlipSpritesBasedOnDirFacing();
 
             dir.Normalize();
             if (dir == Vector2.zero)
@@ -79,11 +69,23 @@ namespace Player
                 _animator.SetBool("IsIdle", false);
                 _animator.SetBool("IsMoving", true);
             }
-            // animator.SetFloat("Horizontal", dir.x);
-            // animator.SetFloat("Vertical", dir.y);
-            // animator.SetBool("IsMoving", dir.magnitude > 0);
 
             _rb.velocity = speed * dir;
+        }
+
+        private void FlipSpritesBasedOnDirFacing()
+        {
+            Vector2 mouse = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);
+            if (mouse.x < Screen.width / 2)
+            {
+                _spriteRenderer.flipX = true;
+                weaponSpriteRender.flipY = true;
+            }
+            else if (mouse.x > Screen.width / 2)
+            {
+                _spriteRenderer.flipX = false;
+                weaponSpriteRender.flipY = false;
+            }
         }
 
         private void ControlWeaponAim()
