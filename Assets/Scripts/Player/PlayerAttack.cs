@@ -11,11 +11,12 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Transform projectileSpawnPos;
 
     [SerializeField] private float attackCooldown = 1.5f;
+    private float _timeSinceLastAttack = 999f;
+
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip attackSound;
     
-    private float _timeSinceLastAttack = 999f;
     public bool isControlsEnabled;
 
     private Animator _animator;
