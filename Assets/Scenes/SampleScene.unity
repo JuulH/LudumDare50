@@ -655,11 +655,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b1c6c2ec9b584682bb3018bc87db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDie: {fileID: 0}
+  enemyDie: {fileID: 24404185}
   playerShoot: {fileID: 24404184}
   catMeow: {fileID: 24404183}
   playerHit: {fileID: 24404182}
-  houseHit: {fileID: 24404185}
+  houseHit: {fileID: 24404187}
   houseCollapse: {fileID: 24404180}
   coinPickup: {fileID: 24404190}
   playerDie: {fileID: 24404189}
@@ -770,7 +770,7 @@ AudioSource:
   m_GameObject: {fileID: 24404179}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3916224392616407093, guid: 7bf6136fac97bfa43adc456c1089228d, type: 2}
   m_audioClip: {fileID: 8300000, guid: e3860e691d7f06e4287b1cf948bdae70, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -866,7 +866,7 @@ AudioSource:
   m_GameObject: {fileID: 24404179}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3916224392616407093, guid: 7bf6136fac97bfa43adc456c1089228d, type: 2}
   m_audioClip: {fileID: 8300000, guid: 57380ed6654f18048964f23fc4b09fa3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -962,7 +962,7 @@ AudioSource:
   m_GameObject: {fileID: 24404179}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3916224392616407093, guid: 7bf6136fac97bfa43adc456c1089228d, type: 2}
   m_audioClip: {fileID: 8300000, guid: 163fb7c9cf8f6af43b3a62409050fe5a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.86
