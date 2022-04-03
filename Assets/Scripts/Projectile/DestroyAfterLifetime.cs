@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class DestroyAfterLifetime : MonoBehaviour
 {
-    [SerializeField] private float lifeTIme;
+    [SerializeField] private float lifeTime;
     
     void Start()
     {
-        Destroy(this.gameObject, lifeTIme);
-    }
-
-    void Update()
-    {
-        
+        Destroy(this.gameObject, lifeTime);
     }
 }
