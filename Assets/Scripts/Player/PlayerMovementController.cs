@@ -6,8 +6,6 @@ namespace Player
     {
         [SerializeField] private GameObject weaponAttachment;
         private Camera _cam;
-
-
         public float speed;
         public bool isControlsEnabled = true;
 
@@ -68,9 +66,6 @@ namespace Player
             _rb.velocity = speed * dir;
         }
 
-        private bool hasFlippedRight = true;
-        private bool hasFlippedLeft = true;
-        
         private void FlipSpritesBasedOnDirFacing()
         {
             Vector2 mouse = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);

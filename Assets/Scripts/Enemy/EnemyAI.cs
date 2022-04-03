@@ -40,6 +40,14 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         _timeSinceLastAttack += Time.deltaTime;
+        if (_isAttacking)
+        {
+            _aiPath.enabled = false;
+        }
+        else
+        {
+            _aiPath.enabled = true;
+        }
         _aiPath.destination = _currentTarget.transform.position;
 
         float distanceToPlayer = Vector2.Distance(_player.transform.position, transform.position);
