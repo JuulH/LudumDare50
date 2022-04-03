@@ -23,6 +23,11 @@ public class HouseHealth : MonoBehaviour, Health
             _currentHealth -= damage;
             uiManager.SetHouseCurrentHealth(_currentHealth);
         }
+
+        if (_currentHealth <= 0)
+        {
+            GameManager.GameOver();
+        }
     }
 
 }

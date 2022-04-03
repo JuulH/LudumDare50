@@ -24,6 +24,11 @@ public class PlayerHealth : MonoBehaviour, Health
             uiManager.SetPlayerCurrentHealth(_currentHealth);
             StartCoroutine(MakeInvicibleFor(invincibilityTimeAfterHit));
         }
+
+        if(_currentHealth <= 0)
+        {
+            GameManager.GameOver();
+        }
     }
 
     public IEnumerator MakeInvicibleFor(float xSeconds)

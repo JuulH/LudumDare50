@@ -655,6 +655,7 @@ MonoBehaviour:
   playerShoot: {fileID: 24404184}
   catMeow: {fileID: 24404183}
   playerHit: {fileID: 24404182}
+  houseHit: {fileID: 0}
   houseCollapse: {fileID: 24404180}
 --- !u!1 &31847267
 GameObject:
@@ -3628,6 +3629,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1486886821475783936, guid: 97c94b67a0225a647a77f796c24bbaa6, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9733334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486886821475783936, guid: 97c94b67a0225a647a77f796c24bbaa6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486886821475783936, guid: 97c94b67a0225a647a77f796c24bbaa6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9152d85f2b04f9d48be0d6d98d247958, type: 3}
+    - target: {fileID: 1486886821475783936, guid: 97c94b67a0225a647a77f796c24bbaa6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1486886821475783937, guid: 97c94b67a0225a647a77f796c24bbaa6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3689,6 +3706,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5599225179542541302, guid: 2e72904fb33f2524f907bf0bcf9cfcb7, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 3796663953845114732, guid: 6b7892299a2c7274ba5373d68ac7dc65, type: 3}
     - target: {fileID: 8750849789051368674, guid: 2e72904fb33f2524f907bf0bcf9cfcb7, type: 3}
       propertyPath: m_Name
       value: Enemy
