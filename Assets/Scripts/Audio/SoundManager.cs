@@ -14,6 +14,11 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource playerHit;
     [SerializeField] private AudioSource houseHit;
     [SerializeField] private AudioSource houseCollapse;
+    [SerializeField] private AudioSource coinPickup;
+    [SerializeField] private AudioSource playerDie;
+    [SerializeField] private AudioSource upgradeBuy;
+    [SerializeField] private AudioSource menuClick; // I think this one is going to be alone at the menu prefab
+    
 
     void Start()
     {
@@ -24,6 +29,11 @@ public class SoundManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void PlayEnemyDie()
+    {
+        this.enemyDie.Play();
     }
 
     public void PlayPlayerShoot()
@@ -45,4 +55,21 @@ public class SoundManager : MonoBehaviour
     {
         this.houseHit.Play();
     }
+
+    public void PlayCoinPickup()
+    {
+        this.coinPickup.Play();
+    }
+
+    public void PlayPlayerDie()
+    {
+        this.playerDie.Play();
+    }
+
+    public void PlayerUpgradeBuy()
+    {
+        this.upgradeBuy.Play();
+    }
+
+
 }
