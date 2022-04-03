@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour, Health
     public void TakeDamage(float damage)
     {
         var enemyTransform = transform;
+        GameManager.AddScore(100);
         Instantiate(enemyDeath, enemyTransform.position, enemyTransform.rotation);
         Instantiate(coinPrefab, enemyTransform.position, enemyTransform.rotation);
         Destroy(gameObject);

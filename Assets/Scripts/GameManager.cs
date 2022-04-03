@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public int score;
+    public static int score;
     public static int coins;
 
     // Start is called before the first frame update
@@ -30,5 +30,11 @@ public class GameManager : MonoBehaviour
     {
         coins += 1;
         Debug.Log(coins);
+    }
+
+    public static void AddScore(int points)
+    {
+        score += points;
+        Debug.Log(score);
     }
 }
