@@ -15,6 +15,7 @@ public class CollidingEnemyProjectile : MonoBehaviour
     {
         if (other.CompareTag("House"))
         {
+            _soundManager.PlayHouseHit();
             TakeDamage(other);
         }
         else if (other.CompareTag("Player"))

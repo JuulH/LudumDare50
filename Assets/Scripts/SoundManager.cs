@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource playerShoot;
     [SerializeField] private AudioSource catMeow;
     [SerializeField] private AudioSource playerHit;
+    [SerializeField] private AudioSource houseHit;
     [SerializeField] private AudioSource houseCollapse;
 
     void Start()
@@ -38,5 +39,10 @@ public class SoundManager : MonoBehaviour
     public void PlayCatMeow()
     {
         // this.catMeowb;
+    }
+
+    public void PlayHouseHit()
+    {
+        this.houseHit.Play();
     }
 }

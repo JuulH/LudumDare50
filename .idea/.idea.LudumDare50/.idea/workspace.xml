@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cc296d7-0cc7-4d15-8160-0dc1a2584476" name="Changes" comment="" />
+    <list default="true" id="6cc296d7-0cc7-4d15-8160-0dc1a2584476" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare50/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare50/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile/CollidingEnemyProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile/CollidingEnemyProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +99,7 @@
       <workItem from="1648901495160" duration="2687000" />
       <workItem from="1648904855442" duration="5405000" />
       <workItem from="1648911725014" duration="20188000" />
-      <workItem from="1648999621763" duration="5684000" />
+      <workItem from="1648999621763" duration="5985000" />
     </task>
     <servers />
   </component>
