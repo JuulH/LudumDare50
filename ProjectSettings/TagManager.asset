@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Boundary
   - SoundManager
+  - HouseTarget
+  - AreaAroundHouse
   layers:
   - Default
   - TransparentFX

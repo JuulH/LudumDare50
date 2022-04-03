@@ -16,14 +16,17 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private GameObject enemyProjectile;
     [SerializeField] private float attackCooldown = 1.5f;
     [SerializeField] private float throwAttackStartUp = 0.5f;
+    [SerializeField] private float houseAttackOffsetDistance = 1.5f;
     private float _timeSinceLastAttack = 999f;
     private bool _isAttacking;
+    private bool _isHouseAttacker;
 
     private SoundManager _soundManager;
     
     private static readonly int Throwing = Animator.StringToHash("Throwing");
     private static readonly int IsMoving = Animator.StringToHash("IsMoving");
     private static readonly int IsStanding = Animator.StringToHash("IsStanding");
+    private Rigidbody2D _rb;
 
     void Awake()
     {
@@ -31,10 +34,20 @@ public class EnemyAI : MonoBehaviour
         _animator = GetComponent<Animator>();
         _house = GameObject.FindWithTag("House");
         _player = GameObject.FindWithTag("Player");
-        _attackDistance = _aiPath.endReachedDistance;
         _soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
+        _rb = GetComponent<Rigidbody2D>();
         int random = Random.Range(0, 2);
         _currentTarget = (random == 0) ? _player : _house;
+        if (_currentTarget == _house)
+        {
+            _attackDistance = _aiPath.endReachedDistance + houseAttackOffsetDistance;
+            _isHouseAttacker = true;
+        }
+        else
+        {
+            _attackDistance = _aiPath.endReachedDistance;
+        }
+        
     }
 
     // Update is called once per frame
@@ -43,16 +56,16 @@ public class EnemyAI : MonoBehaviour
         _timeSinceLastAttack += Time.deltaTime;
         if (_isAttacking)
         {
-            _aiPath.enabled = false;
+            _aiPath.canMove = false;
         }
         else
         {
-            _aiPath.enabled = true;
+            _aiPath.canMove = true;
         }
         _aiPath.destination = _currentTarget.transform.position;
 
-        float distanceToPlayer = Vector2.Distance(_player.transform.position, transform.position);
-        if (distanceToPlayer <= _attackDistance)
+        float distanceToTarget = Vector2.Distance(_currentTarget.transform.position, transform.position);
+        if (distanceToTarget <= _attackDistance)
         {
             if (!_isAttacking && _timeSinceLastAttack > attackCooldown)
             {
@@ -60,6 +73,10 @@ public class EnemyAI : MonoBehaviour
             }
             _animator.SetBool(IsMoving, false);
             _animator.SetBool(IsStanding, true);
+            if (_isHouseAttacker) {
+                _aiPath.enabled = false; //So house attackers stop once they attack house, and just stand there. As pathfinding for house is weird and buggy
+                _rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
         }
         else
         {
