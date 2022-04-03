@@ -31,9 +31,10 @@ public class EnemyAI : MonoBehaviour
         _animator = GetComponent<Animator>();
         _house = GameObject.FindWithTag("House");
         _player = GameObject.FindWithTag("Player");
-        _currentTarget = _player;
         _attackDistance = _aiPath.endReachedDistance;
         _soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
+        int random = Random.Range(0, 2);
+        _currentTarget = (random == 0) ? _player : _house;
     }
 
     // Update is called once per frame
@@ -73,9 +74,9 @@ public class EnemyAI : MonoBehaviour
         _animator.SetTrigger(Throwing);
         yield return new WaitForSeconds(throwAttackStartUp);
         Vector2 enemyPosition = transform.position;
-        Vector2 playerPosition = _player.transform.position;
-        Vector2 dirToPlayer = playerPosition - enemyPosition ;
-        float angle = Mathf.Atan2(dirToPlayer.y, dirToPlayer.x)  * Mathf.Rad2Deg - 90f;
+        Vector2 targetPosition = _currentTarget.transform.position;
+        Vector2 dirToTarget = targetPosition - enemyPosition ;
+        float angle = Mathf.Atan2(dirToTarget.y, dirToTarget.x)  * Mathf.Rad2Deg - 90f;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         Instantiate(enemyProjectile, transform.position, rotation);
         _isAttacking = false;
