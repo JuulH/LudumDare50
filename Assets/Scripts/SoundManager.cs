@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    //Audio CLips
 
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip enemyDie;
-    [SerializeField] private AudioClip playerShoot;
-    [SerializeField] private AudioClip catMeow;
-    [SerializeField] private AudioClip playerHit;
-    [SerializeField] private AudioClip houseCollapse;
+
+    //Audio Sources
+    [SerializeField] private AudioSource enemyDie;
+    [SerializeField] private AudioSource playerShoot;
+    [SerializeField] private AudioSource catMeow;
+    [SerializeField] private AudioSource playerHit;
+    [SerializeField] private AudioSource houseCollapse;
+
     void Start()
     {
         
@@ -24,16 +27,16 @@ public class SoundManager : MonoBehaviour
 
     public void PlayPlayerShoot()
     {
-        audioSource.PlayOneShot(playerShoot);
+        this.playerShoot.Play();
     }
 
     public void PlayPlayerHit()
     {
-        audioSource.PlayOneShot(playerHit);
+        this.playerHit.Play();
     }
 
     public void PlayCatMeow()
     {
-        // audioSource.PlayOneShot(catMeow);
+        // this.catMeowb;
     }
 }
