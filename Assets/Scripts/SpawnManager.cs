@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -11,6 +12,8 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private float initialSpawnFrequency;
     [SerializeField] private float difficultyIncreaseFrequency;
     [SerializeField] private float difficultyIncreaseModifier;
+    [SerializeField] private TextMeshProUGUI nextDifficultyIncreaseInText;
+    [SerializeField] private TextMeshProUGUI currentSpawnFreqText;
 
     private float _spawnFrequency;
     private float _spawnTimer;
@@ -19,6 +22,7 @@ public class SpawnManager : MonoBehaviour
     private void Start()
     {
         _spawnFrequency = initialSpawnFrequency;
+        currentSpawnFreqText.text = "" + _spawnFrequency;
     }
 
 
@@ -33,6 +37,7 @@ public class SpawnManager : MonoBehaviour
         }
 
         _difficultyIncreaseTimer += Time.deltaTime;
+        nextDifficultyIncreaseInText.text = "" + (difficultyIncreaseFrequency - _difficultyIncreaseTimer);
         if (_difficultyIncreaseTimer > difficultyIncreaseFrequency)
         {
             IncreaseDifficulty();
@@ -43,6 +48,7 @@ public class SpawnManager : MonoBehaviour
     private void IncreaseDifficulty()
     {
         _spawnFrequency *= difficultyIncreaseModifier;
+        currentSpawnFreqText.text = "" + _spawnFrequency;
     }
 
     private void SpawnEnemy()
