@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class CollidingPlayerProjectile : MonoBehaviour
 {
-
     [SerializeField] private float damage;
     private SoundManager _soundManager;
 
@@ -22,6 +21,11 @@ public class CollidingPlayerProjectile : MonoBehaviour
             health.TakeDamage(damage);
             _soundManager.PlayCatMeow();
             Destroy(this.gameObject);
-        } 
+        }
+        else if (other.CompareTag("EnemyProjectile"))
+        {
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 }

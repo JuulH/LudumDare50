@@ -10,6 +10,7 @@ TagManager:
   - SoundManager
   - HouseTarget
   - AreaAroundHouse
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
