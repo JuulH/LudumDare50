@@ -1,13 +1,10 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UIElements;
 
 namespace Player
 {
     public class PlayerMovementController : MonoBehaviour
     {
         [SerializeField] private GameObject weaponAttachment;
-        [SerializeField] private SpriteRenderer weaponSpriteRender;
         private Camera _cam;
 
 
@@ -19,13 +16,11 @@ namespace Player
         private Rigidbody2D _rb;
         public Vector2 dir;
         private Vector2 _mousePosition;
-        private SpriteRenderer _spriteRenderer;
 
         private void Start()
         {
             _animator = GetComponent<Animator>();
             _rb = GetComponent<Rigidbody2D>();
-            _spriteRenderer = GetComponent<SpriteRenderer>();
             dir = Vector2.zero;
             _cam = Camera.main;
         }
@@ -73,18 +68,20 @@ namespace Player
             _rb.velocity = speed * dir;
         }
 
+        private bool hasFlippedRight = true;
+        private bool hasFlippedLeft = true;
+        
         private void FlipSpritesBasedOnDirFacing()
         {
             Vector2 mouse = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);
+            Vector3 scale = transform.localScale;
             if (mouse.x < Screen.width / 2)
             {
-                _spriteRenderer.flipX = true;
-                weaponSpriteRender.flipY = true;
+                transform.localScale = new Vector2(-1, scale.y);
             }
             else if (mouse.x > Screen.width / 2)
             {
-                _spriteRenderer.flipX = false;
-                weaponSpriteRender.flipY = false;
+                transform.localScale = new Vector2(1, scale.y);
             }
         }
 
