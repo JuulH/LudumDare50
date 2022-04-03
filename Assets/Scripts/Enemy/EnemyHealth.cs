@@ -1,12 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour, Health
 {
+    [SerializeField] private GameObject enemyDeath;
 
     public void TakeDamage(float damage)
     {
-        Destroy(this.gameObject);
+        var enemyTransform = transform;
+        Instantiate(enemyDeath, enemyTransform.position, enemyTransform.rotation);
+        Destroy(gameObject);
     }
 }

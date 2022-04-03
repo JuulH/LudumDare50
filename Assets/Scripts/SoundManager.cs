@@ -34,6 +34,6 @@ public class SoundManager : MonoBehaviour
 
     public void PlayCatMeow()
     {
-        audioSource.PlayOneShot(catMeow);
+        // audioSource.PlayOneShot(catMeow);
     }
 }
