@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Player;
@@ -13,17 +14,17 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float attackCooldown = 1.5f;
     private float _timeSinceLastAttack = 999f;
 
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip attackSound;
+    private SoundManager _soundManager;
     
     public bool isControlsEnabled;
-    private readonly Quaternion bulletRotationOffset = Quaternion.Euler(0,0,90); 
+    private readonly Quaternion bulletRotationOffset = Quaternion.Euler(0,0,90);
 
-    // private Animator _animator;
-    // private PlayerMovementController _playerMovementController;
 
-    
-    // Update is called once per frame
+    private void Awake()
+    {
+        _soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
+    }
+
     void Update()
     {
         if (!isControlsEnabled) return;
@@ -44,6 +45,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Quaternion bulletRotation = weaponAttachment.transform.rotation * bulletRotationOffset;
             Instantiate(projectile, projectileSpawnPos.position, bulletRotation);
+            _soundManager.PlayPlayerShoot();
             _timeSinceLastAttack = 0;
         }
     }

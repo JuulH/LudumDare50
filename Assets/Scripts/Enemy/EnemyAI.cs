@@ -19,6 +19,8 @@ public class EnemyAI : MonoBehaviour
     private float _timeSinceLastAttack = 999f;
     private bool _isAttacking;
 
+    private SoundManager _soundManager;
+    
     private static readonly int Throwing = Animator.StringToHash("Throwing");
     private static readonly int IsMoving = Animator.StringToHash("IsMoving");
     private static readonly int IsStanding = Animator.StringToHash("IsStanding");
@@ -31,6 +33,7 @@ public class EnemyAI : MonoBehaviour
         _player = GameObject.FindWithTag("Player");
         _currentTarget = _player;
         _attackDistance = _aiPath.endReachedDistance;
+        _soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
