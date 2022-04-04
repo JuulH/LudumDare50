@@ -4347,6 +4347,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1229663065}
+    - target: {fileID: 555262306, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 555262308, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -20042,9 +20046,9 @@ MonoBehaviour:
   _playerGun: {fileID: 1565740302}
   activeGunSprite: {fileID: 224408348}
   weaponSprites:
-  - {fileID: 21300000, guid: 4262c34c219798e42ae3a3cbf8c68118, type: 3}
-  - {fileID: 4852167336598282744, guid: 149cd9db5cdbab94f9e9f50485ce6019, type: 3}
-  - {fileID: 0}
+  - {fileID: -6911898592872783027, guid: 013060993ecb71540a73cd0080344015, type: 3}
+  - {fileID: 4852167336598282744, guid: 8eaa64598f1e7f143a6eb2818fe7fc53, type: 3}
+  - {fileID: 1929223289967640128, guid: 8eaa64598f1e7f143a6eb2818fe7fc53, type: 3}
   house: {fileID: 1178641306}
   coinsText: {fileID: 352141058}
   scoreText: {fileID: 857430404}

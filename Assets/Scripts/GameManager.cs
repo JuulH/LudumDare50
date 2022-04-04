@@ -136,10 +136,10 @@ public class GameManager : MonoBehaviour
         {
             _playerAttack.attackCooldown -= .05f;
             RemoveCoins(weaponUpgradeCostContainer.Cost());
+            _weaponUpgrades += 1;
+            activeGunSprite.sprite = weaponSprites[_weaponUpgrades];
         }
 
-        _weaponUpgrades += 1;
-        activeGunSprite.sprite = weaponSprites[_weaponUpgrades];
         UpdateUpgradeCosts();
     }
 
