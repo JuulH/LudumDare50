@@ -3070,6 +3070,10 @@ PrefabInstance:
       propertyPath: cinemachineVirtualCamera
       value: 
       objectReference: {fileID: 1645294498}
+    - target: {fileID: 1949692990, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: _screenShake
+      value: 
+      objectReference: {fileID: 1645294500}
     - target: {fileID: 8398190122068891691, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: m_Name
       value: Player
@@ -17707,6 +17711,7 @@ GameObject:
   - component: {fileID: 960198199}
   - component: {fileID: 960198201}
   - component: {fileID: 960198200}
+  - component: {fileID: 960198202}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -17783,6 +17788,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &960198202
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960198198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 10
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1001 &976875801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20265,9 +20287,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1645294499}
   - component: {fileID: 1645294498}
+  - component: {fileID: 1645294500}
   m_Layer: 0
   m_Name: CM vcam1
-  m_TagString: Untagged
+  m_TagString: Cinemachine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20322,6 +20345,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1645294500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645294497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a59788aede49ef4eaee3667e9862aac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1655489101
 PrefabInstance:
   m_ObjectHideFlags: 0
