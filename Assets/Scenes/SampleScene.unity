@@ -4417,9 +4417,13 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1229663065}
+    - target: {fileID: 555262308, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4852167336598282744, guid: 149cd9db5cdbab94f9e9f50485ce6019, type: 3}
     - target: {fileID: 1178711838, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3210509118765326455, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: m_IsActive
