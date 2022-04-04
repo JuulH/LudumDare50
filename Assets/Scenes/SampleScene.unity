@@ -2193,6 +2193,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 171.17647}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &235783343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3210509118765326455, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+  m_PrefabInstance: {fileID: 528603477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &249288552 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 249288552, guid: 97c94b67a0225a647a77f796c24bbaa6, type: 3}
@@ -2962,36 +2967,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -2557648982241031519, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -2557648982241031519, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 1325707301}
     - target: {fileID: -2557648982241031519, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: deathSprite
+      value: 
+      objectReference: {fileID: 5835691435410102447, guid: ba520643a05ea1e47bf34e56ec9ccbb3, type: 3}
+    - target: {fileID: -2557648982241031519, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1229663065}
-    - target: {fileID: 555262306, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 555262308, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: -2557648982241031519, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: playerDeath
       value: 
-      objectReference: {fileID: -6911898592872783027, guid: 013060993ecb71540a73cd0080344015, type: 3}
-    - target: {fileID: 1178711838, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3210509118765326455, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7406187495611065673, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3059065962052929652, guid: 3804aa746b21466418a3897997222557, type: 3}
+    - target: {fileID: -2557648982241031519, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: weaponAttachment
+      value: 
+      objectReference: {fileID: 235783343}
+    - target: {fileID: -2557648982241031519, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: cinemachineVirtualCamera
+      value: 
+      objectReference: {fileID: 1645294498}
     - target: {fileID: 8398190122068891691, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398190122068891692, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8398190122068891694, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: m_RootOrder
@@ -3403,7 +3412,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f1142e2750500c04dbbaec156dc7cead, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
