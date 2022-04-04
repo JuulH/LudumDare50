@@ -39,7 +39,7 @@ public class HouseHealth : MonoBehaviour, Health
         }
     }
 
-    public void updateHealthBar()
+    public void UpdateHealthBar()
     {
         uiManager.SetHouseMaxHealth(maxHealth);
         uiManager.SetHouseCurrentHealth(_currentHealth);
@@ -48,5 +48,15 @@ public class HouseHealth : MonoBehaviour, Health
     public void ResetHealth()
     {
         _currentHealth = maxHealth;
+    }
+
+    public void RepairHealth(int amount)
+    {
+        _currentHealth += amount;
+        if (_currentHealth > maxHealth)
+        {
+            _currentHealth = maxHealth;
+        }
+        uiManager.SetHouseCurrentHealth(_currentHealth);
     }
 }

@@ -51,4 +51,14 @@ public class PlayerHealth : MonoBehaviour, Health
     {
         _currentHealth = maxHealth;
     }
+
+    public void RecoverHealth(int amount)
+    {
+        _currentHealth += amount;
+        if (_currentHealth > maxHealth)
+        {
+            _currentHealth = maxHealth;
+        }
+        uiManager.SetPlayerCurrentHealth(_currentHealth);
+    }
 }

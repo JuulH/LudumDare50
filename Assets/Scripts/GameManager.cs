@@ -39,20 +39,30 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button weaponUpgradeButton;
     [SerializeField] private Button speedUpgradeButton;
     [SerializeField] private Button fortifyUpgradeButton;
+    [SerializeField] private Button repairUpgradeButton;
+    [SerializeField] private Button recoverUpgradeButton;
     private int _weaponUpgrades;
     private int _speedUpgrades;
     private int _fortifyUpgrades;
+    private int _repairUpgrades;
+    private int _recoverUpgrades;
     [SerializeField] private int maxWeaponUpgrades = 3;
     [SerializeField] private int maxSpeedUpgrades = 3;
     [SerializeField] private int maxFortifyUpgrades = 3;
+    [SerializeField] private int maxRecoverUpgrades = 999;
+    [SerializeField] private int maxRepairUpgrades = 999;
 
     [SerializeField] private int weaponUpgradeCost = 1;
     [SerializeField] private int speedUpgradeCost = 1;
     [SerializeField] private int fortifyUpgradeCost = 1;
+    [SerializeField] private int repairUpgradeCost = 1;
+    [SerializeField] private int recoverUpgradeCost = 1;
 
     [SerializeField] private UpgradeCost weaponUpgradeCostContainer;
     [SerializeField] private UpgradeCost speedUpgradeCostContainer;
     [SerializeField] private UpgradeCost fortifyUpgradeCostContainer;
+    [SerializeField] private UpgradeCost repairUpgradeCostContainer;
+    [SerializeField] private UpgradeCost recoverUpgradeCostContainer;
     
     [SerializeField] private GameObject inGameCanvas;
     [SerializeField] private GameObject startMenuCanvas;
@@ -61,6 +71,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SoundManager soundManager;
     
     [SerializeField] private TMP_Text gameOverOverviewText;
+    [SerializeField] private GameObject playerHealthBar;
+    [SerializeField] private GameObject houseHealthBar;
 
 
     void Start()
@@ -156,6 +168,34 @@ public class GameManager : MonoBehaviour
         _fortifyUpgrades += 1;
         UpdateUpgradeCosts();
     }
+    
+    public void RepairUpgrade()
+    {
+        if (coins < repairUpgradeCostContainer.Cost()) return;
+        soundManager.PlayerUpgradeBuy();
+        if (_repairUpgrades < maxRepairUpgrades)
+        {
+            _houseHealth.RepairHealth(25);
+            RemoveCoins(repairUpgradeCostContainer.Cost());
+        }
+
+        _repairUpgrades += 1;
+        UpdateUpgradeCosts();
+    }
+    
+    public void RecoverUpgrade()
+    {
+        if (coins < recoverUpgradeCostContainer.Cost()) return;
+        soundManager.PlayerUpgradeBuy();
+        if (_recoverUpgrades < maxRepairUpgrades)
+        {
+            _playerHealth.RecoverHealth(25);
+            RemoveCoins(recoverUpgradeCostContainer.Cost());
+        }
+
+        _recoverUpgrades += 1;
+        UpdateUpgradeCosts();
+    }
 
     public void WaveComplete(int waveNumCompleted)
     {
@@ -164,6 +204,8 @@ public class GameManager : MonoBehaviour
         waveNumberText.text = "" + waveNumCompleted;
         UpdateUpgradeCosts();
         inGameCanvas.SetActive(false);
+        playerHealthBar.transform.SetParent(intermissionCanvas.transform, false);
+        houseHealthBar.transform.SetParent(intermissionCanvas.transform, false);
         intermissionCanvas.SetActive(true);
     }
 
@@ -172,10 +214,9 @@ public class GameManager : MonoBehaviour
         _playerAttack.isControlsEnabled = true;
         Time.timeScale = 1f;
         elapsedTime = 0f;
-        _houseHealth.ResetHealth();
-        _playerHealth.ResetHealth();
-        _houseHealth.updateHealthBar();
         inGameCanvas.SetActive(true);
+        playerHealthBar.transform.SetParent(inGameCanvas.transform, false);
+        houseHealthBar.transform.SetParent(inGameCanvas.transform, false);
         intermissionCanvas.SetActive(false);
     }
 
@@ -184,6 +225,8 @@ public class GameManager : MonoBehaviour
         UpdateUpgradeCostFor(weaponUpgradeCostContainer, _weaponUpgrades, weaponUpgradeCost, maxWeaponUpgrades, weaponUpgradeButton);
         UpdateUpgradeCostFor(fortifyUpgradeCostContainer, _fortifyUpgrades, fortifyUpgradeCost, maxFortifyUpgrades, fortifyUpgradeButton);
         UpdateUpgradeCostFor(speedUpgradeCostContainer, _speedUpgrades, speedUpgradeCost, maxSpeedUpgrades, speedUpgradeButton);
+        UpdateUpgradeCostFor(repairUpgradeCostContainer, _repairUpgrades, repairUpgradeCost, maxRepairUpgrades, repairUpgradeButton);
+        UpdateUpgradeCostFor(recoverUpgradeCostContainer, _recoverUpgrades, recoverUpgradeCost, maxRecoverUpgrades, recoverUpgradeButton);
     }
 
     private void UpdateUpgradeCostFor(UpgradeCost upgradeCostContainer, int upgradesHappened, int upgradeCost, 
@@ -226,18 +269,18 @@ public class GameManager : MonoBehaviour
     public static void AddCoin()
     {
         coins += 1;
-        Debug.Log("Coins : " + coins);
+        // Debug.Log("Coins : " + coins);
     }
 
     public static void RemoveCoins(int amountToRemove)
     {
         coins -= amountToRemove;
-        Debug.Log("Coins after removal: " + coins);
+        // Debug.Log("Coins after removal: " + coins);
     }
 
     public static void AddScore(int points)
     {
         score += points;
-        Debug.Log("Score " + score);
+        // Debug.Log("Score " + score);
     }
 }
