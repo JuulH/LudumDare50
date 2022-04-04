@@ -3,18 +3,30 @@ using UnityEngine;
 
 public class UpgradeCost : MonoBehaviour
 {
-    private TextMeshProUGUI _text;
-    private int _cost = 0;
+    private int _cost;
+    private bool _isMaxUpgradeLimitReached;
+
+    [SerializeField] private GameObject maxLimitReachedText;
+    [SerializeField] private GameObject coinIcon;
+    [SerializeField] private TextMeshProUGUI upgradeCostText;
 
     public void SetCost(int cost)
     {
+        if (_isMaxUpgradeLimitReached) return;
         _cost = cost;
-        _text = GetComponent<TextMeshProUGUI>(); //Awake/Start isn't called in time for this method, do this at runtime
-        _text.text = "x " + cost;
+        upgradeCostText.text = "x " + cost;
     }
 
     public int Cost()
     {
         return _cost;
+    }
+
+    public void SetMaxUpgradeLimitReached()
+    {
+        _isMaxUpgradeLimitReached = true;
+        maxLimitReachedText.SetActive(true);
+        coinIcon.SetActive(false);
+        upgradeCostText.gameObject.SetActive(false);
     }
 }

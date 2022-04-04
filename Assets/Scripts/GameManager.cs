@@ -101,8 +101,8 @@ public class GameManager : MonoBehaviour
         if (coins < fortifyUpgradeCostContainer.Cost()) return;
         if (fortifyUpgrades < maxFortifyUpgrades)
         {
-            RemoveCoins(fortifyUpgradeCostContainer.Cost());
             houseHealth.maxHealth += 100f;
+            RemoveCoins(fortifyUpgradeCostContainer.Cost());
         }
 
         fortifyUpgrades += 1;
@@ -131,48 +131,28 @@ public class GameManager : MonoBehaviour
 
     private void UpdateUpgradeCosts()
     {
-        UpdateWeaponUpgradeCost();
-        UpdateSpeedUpgradeCost();
-        UpdateFortifyUpgradeCost();
+        UpdateUpgradeCostFor(weaponUpgradeCostContainer, weaponUpgrades, weaponUpgradeCost, maxWeaponUpgrades, weaponUpgradeButton);
+        UpdateUpgradeCostFor(fortifyUpgradeCostContainer, fortifyUpgrades, fortifyUpgradeCost, maxFortifyUpgrades, fortifyUpgradeButton);
+        UpdateUpgradeCostFor(speedUpgradeCostContainer, speedUpgrades, speedUpgradeCost, maxSpeedUpgrades, speedUpgradeButton);
     }
 
-    private void UpdateFortifyUpgradeCost()
+    private void UpdateUpgradeCostFor(UpgradeCost upgradeCostContainer, int upgradesHappened, int upgradeCost, 
+        int maxUpgrades, Button upgradeButton) 
     {
-        fortifyUpgradeCostContainer.SetCost((fortifyUpgrades + 1) * fortifyUpgradeCost);
-        if (fortifyUpgrades >= maxFortifyUpgrades || coins < fortifyUpgradeCostContainer.Cost())
+        upgradeCostContainer.SetCost((upgradesHappened + 1) * upgradeCost);
+        if (upgradesHappened >= maxUpgrades)
         {
-            fortifyUpgradeButton.interactable = false;
+            upgradeCostContainer.SetMaxUpgradeLimitReached();
+            upgradeButton.interactable = false;
+        }
+        else if (coins < upgradeCostContainer.Cost())
+        {
+            upgradeButton.interactable = false;
+
         }
         else
         {
-            fortifyUpgradeButton.interactable = true;
-        }
-    }
-
-    private void UpdateSpeedUpgradeCost()
-    {
-        speedUpgradeCostContainer.SetCost((speedUpgrades + 1) * speedUpgradeCost);
-        if (speedUpgrades >= maxSpeedUpgrades || coins < speedUpgradeCostContainer.Cost())
-        {
-            speedUpgradeButton.interactable = false;
-        }
-        else
-        {
-            speedUpgradeButton.interactable = true;
-
-        }
-    }
-
-    private void UpdateWeaponUpgradeCost()
-    {
-        weaponUpgradeCostContainer.SetCost((weaponUpgrades + 1) * weaponUpgradeCost);
-        if (weaponUpgrades >= maxWeaponUpgrades || coins < weaponUpgradeCostContainer.Cost())
-        {
-            weaponUpgradeButton.interactable = false;
-        }
-        else
-        {
-            weaponUpgradeButton.interactable = true;
+            upgradeButton.interactable = true;
         }
     }
 
