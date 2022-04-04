@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject weaponAttachment;
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform projectileSpawnPos;
+    [SerializeField] private Transform miniGunProjectileSpawnPos;
 
     public float attackCooldown = 1.5f;
     private float _timeSinceLastAttack = 999f;
@@ -48,5 +49,10 @@ public class PlayerAttack : MonoBehaviour
             _soundManager.PlayPlayerShoot();
             _timeSinceLastAttack = 0;
         }
+    }
+    
+    public void SwitchProjectileSpawnToMiniGun()
+    {
+        projectileSpawnPos.transform.position = miniGunProjectileSpawnPos.transform.position;
     }
 }

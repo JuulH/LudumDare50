@@ -3329,6 +3329,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1432583171397336296, guid: ad0079d3e80672e4e882fb950c06ba68, type: 3}
   m_PrefabInstance: {fileID: 870344537}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &458830261 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 285249335881225540, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+  m_PrefabInstance: {fileID: 528603477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &471906655 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8750849789051368684, guid: 2e72904fb33f2524f907bf0bcf9cfcb7, type: 3}
@@ -3615,6 +3620,18 @@ PrefabInstance:
       propertyPath: _screenShake
       value: 
       objectReference: {fileID: 1645294500}
+    - target: {fileID: 1949692990, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: miniGunProjectileSpawnPos
+      value: 
+      objectReference: {fileID: 458830261}
+    - target: {fileID: 285249335881225540, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 285249335881225540, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.604
+      objectReference: {fileID: 0}
     - target: {fileID: 8398190122068891691, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: m_Name
       value: Player

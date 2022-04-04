@@ -155,6 +155,10 @@ public class GameManager : MonoBehaviour
             RemoveCoins(weaponUpgradeCostContainer.Cost());
             _weaponUpgrades += 1;
             activeGunSprite.sprite = weaponSprites[_weaponUpgrades];
+            if (activeGunSprite.sprite == weaponSprites[weaponSprites.Length - 1])
+            {
+                _playerAttack.SwitchProjectileSpawnToMiniGun();
+            }
         }
 
         UpdateUpgradeCosts();
@@ -280,7 +284,9 @@ public class GameManager : MonoBehaviour
         soundManager.StopGameMusic();
         soundManager.PlayGameoverSound();
         
-        string totalTime = string.Format("{0:00}:{1:00}", mins, secs);
+        var totalMins = Mathf.Floor(_totalTimeElapsed / 60);
+        var totalSecs = Mathf.RoundToInt(_totalTimeElapsed - mins * 60);
+        string totalTime = string.Format("{0:00}:{1:00}", totalMins, totalSecs);
         gameOverOverviewText.text = string.Format("Waves: {0}\nScore: {1}\nTime: {2}", wavesCompleted.ToString(), score.ToString(),
             totalTime);
         
