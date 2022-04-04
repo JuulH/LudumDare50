@@ -18,9 +18,9 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource coinPickup;
     [SerializeField] private AudioSource playerDie;
     [SerializeField] private AudioSource upgradeBuy;
-    [SerializeField] private AudioSource menuClick; // I think this one is going to be alone at the menu prefab
     [SerializeField] private AudioSource menuMusicAS;
     [SerializeField] private AudioSource battleMusicAS;
+    [SerializeField] private AudioSource gameoverSound;
 
     private bool isMenu;
     private bool isGame;
@@ -82,6 +82,12 @@ public class SoundManager : MonoBehaviour
         battleMusicAS.Play();
     }
 
+    public void StopGameMusic()
+    {
+        isGame = false;
+        battleMusicAS.Stop();
+    }
+
     public void PlayEnemyDie()
     {
         this.enemyDie.Play();
@@ -125,5 +131,10 @@ public class SoundManager : MonoBehaviour
     public void PlayHouseCollapse()
     {
         this.houseCollapse.Play();
+    }
+
+    public void PlayGameoverSound()
+    {
+        this.gameoverSound.Play();
     }
 }

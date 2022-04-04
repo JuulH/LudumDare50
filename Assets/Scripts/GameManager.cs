@@ -253,6 +253,8 @@ public class GameManager : MonoBehaviour
     {
         inGameCanvas.SetActive(false);
         gameOverMenuCanvas.SetActive(true);
+        soundManager.StopGameMusic();
+        soundManager.PlayGameoverSound();
         
         gameOverOverviewText.text = string.Format("Coins: {0}\nScore: {1}\nTime: {2}", coins.ToString(), score.ToString(),
             overviewTime);
