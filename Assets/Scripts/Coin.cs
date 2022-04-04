@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,9 +16,11 @@ public class Coin : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("Collided with coin");
             GameManager.AddCoin();
            _soundManager.PlayCoinPickup();
             Destroy(this.gameObject);
         }
     }
+
 }

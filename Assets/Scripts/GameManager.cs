@@ -41,6 +41,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int maxWeaponUpgrades = 3;
     [SerializeField] private int maxSpeedUpgrades = 3;
     [SerializeField] private int maxFortifyUpgrades = 3;
+    
+    [SerializeField] private int weaponUpgradeCost = 1;
+    [SerializeField] private int speedUpgradeCost = 1;
+    [SerializeField] private int fortifyUpgradeCost = 1;
+
+    [SerializeField] private UpgradeCost weaponUpgradeCostContainer;
+    [SerializeField] private UpgradeCost speedUpgradeCostContainer;
+    [SerializeField] private UpgradeCost fortifyUpgradeCostContainer;
 
     void Start()
     {
@@ -64,22 +72,27 @@ public class GameManager : MonoBehaviour
 
     public void SpeedUpgrade()
     {
+        if (coins < speedUpgradeCostContainer.Cost()) return;
         if (speedUpgrades < maxSpeedUpgrades)
         {
             playerMovement.speed += 1;
+            RemoveCoins(speedUpgradeCostContainer.Cost());
         }
         speedUpgrades += 1;
         if (speedUpgrades >= maxSpeedUpgrades)
         {
             speedUpgradeButton.interactable = false;
         }
+        UpdateUpgradeCosts();
     }
 
     public void GunUpgrade()
     {
+        if (coins < weaponUpgradeCostContainer.Cost()) return;
         if(weaponUpgrades < maxWeaponUpgrades)
         {
             playerAttack.attackCooldown -= .05f;
+            RemoveCoins(weaponUpgradeCostContainer.Cost());
         }
         weaponUpgrades += 1;
         if(weaponUpgrades >= maxWeaponUpgrades)
@@ -90,8 +103,11 @@ public class GameManager : MonoBehaviour
 
     public void FortifyUpgrade()
     {
+        if (coins < fortifyUpgradeCostContainer.Cost()) return;
         if (fortifyUpgrades < maxFortifyUpgrades)
         {
+            coins -= fortifyUpgradeCostContainer.Cost();
+            RemoveCoins(fortifyUpgradeCostContainer.Cost());
             houseHealth.maxHealth += 100f;
         }
         fortifyUpgrades += 1;
@@ -105,8 +121,9 @@ public class GameManager : MonoBehaviour
     {
         playerAttack.isControlsEnabled = false;
         Time.timeScale = 0f;
-        intermissionCanvas.SetActive(true);
         waveNumberText.text = "" + waveNumCompleted;
+        UpdateUpgradeCosts();
+        intermissionCanvas.SetActive(true);
     }
 
     public void NextWave()
@@ -119,6 +136,40 @@ public class GameManager : MonoBehaviour
         houseHealth.updateHealthBar();
         intermissionCanvas.SetActive(false);
     }
+    
+    private void UpdateUpgradeCosts()
+    {
+        UpdateWeaponUpgradeCost();
+        UpdateSpeedUpgradeCost();
+        UpdateFortifyUpgradeCost();
+    }
+
+    private void UpdateFortifyUpgradeCost()
+    {
+        fortifyUpgradeCostContainer.SetCost((fortifyUpgrades + 1) * fortifyUpgradeCost);
+        if (coins < fortifyUpgradeCostContainer.Cost())
+        {
+            fortifyUpgradeButton.interactable = false;
+        }
+    }
+
+    private void UpdateSpeedUpgradeCost()
+    {
+        speedUpgradeCostContainer.SetCost((speedUpgrades + 1) * speedUpgradeCost);
+        if (coins < speedUpgradeCostContainer.Cost())
+        {
+            speedUpgradeButton.interactable = false;
+        }
+    }
+
+    private void UpdateWeaponUpgradeCost()
+    {
+        weaponUpgradeCostContainer.SetCost((weaponUpgrades + 1) * weaponUpgradeCost);
+        if (coins < weaponUpgradeCostContainer.Cost())
+        {
+            weaponUpgradeButton.interactable = false;
+        }
+    }
 
     public static void GameOver()
     {
@@ -130,12 +181,19 @@ public class GameManager : MonoBehaviour
     public static void AddCoin()
     {
         coins += 1;
-        Debug.Log(coins);
+        Debug.Log("Coins : " + coins);
+    }
+    
+    public static void RemoveCoins(int amountToRemove)
+    {
+        coins -= amountToRemove;
+        Debug.Log("Coins after removal: " + coins);
     }
 
     public static void AddScore(int points)
     {
         score += points;
-        Debug.Log(score);
+        Debug.Log("Score " + score);
     }
+    
 }

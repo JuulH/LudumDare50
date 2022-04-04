@@ -10,12 +10,10 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private List<Transform> spawnPoints;
     [SerializeField] private GameObject enemy;
     [SerializeField] private float initialSpawnFrequency;
-    [SerializeField] private float difficultyIncreaseFrequency;
     [SerializeField] private float difficultyIncreaseModifier;
-    [SerializeField] private TextMeshProUGUI nextDifficultyIncreaseInText;
     [SerializeField] private TextMeshProUGUI currentSpawnFreqText;
 
-    [FormerlySerializedAs("enemiesAmount")] [SerializeField] private int initialEnemiesAmount;
+    [SerializeField] private int initialEnemiesAmount;
     private int _enemiesAmount;
     private int _spawnedEnemies;
 
@@ -39,8 +37,6 @@ public class SpawnManager : MonoBehaviour
         _waveNumber = 1;
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         if(_spawnedEnemies < _enemiesAmount)
@@ -52,16 +48,7 @@ public class SpawnManager : MonoBehaviour
                 _spawnedEnemies += 1;
                 _spawnTimer = 0;
             }
-            //Debug.Log(activeEnemies.Count + " - " + enemiesAmount);
         }
-
-        /*_difficultyIncreaseTimer += Time.deltaTime;
-        nextDifficultyIncreaseInText.text = "" + (difficultyIncreaseFrequency - _difficultyIncreaseTimer);
-        if (_difficultyIncreaseTimer > difficultyIncreaseFrequency)
-        {
-            IncreaseDifficulty();
-            _difficultyIncreaseTimer = 0;
-        }*/
     }
 
     private void IncreaseDifficulty()
@@ -88,6 +75,5 @@ public class SpawnManager : MonoBehaviour
             gameManager.WaveComplete(_waveNumber);
             IncreaseDifficulty();
         }
-        //Debug.Log(activeEnemies.Count);
     }
 }
