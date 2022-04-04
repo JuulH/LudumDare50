@@ -2639,6 +2639,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 25}
   m_EdgeRadius: 0
+--- !u!212 &224408348 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 555262308, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+  m_PrefabInstance: {fileID: 528603477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &231204277
 GameObject:
   m_ObjectHideFlags: 0
@@ -4345,7 +4350,7 @@ PrefabInstance:
     - target: {fileID: 555262308, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4852167336598282744, guid: 149cd9db5cdbab94f9e9f50485ce6019, type: 3}
+      objectReference: {fileID: -6911898592872783027, guid: 013060993ecb71540a73cd0080344015, type: 3}
     - target: {fileID: 1178711838, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -20035,6 +20040,11 @@ MonoBehaviour:
   player: {fileID: 1631080874}
   _playerStartPos: {x: -4.45, y: 1.9, z: 0}
   _playerGun: {fileID: 1565740302}
+  activeGunSprite: {fileID: 224408348}
+  weaponSprites:
+  - {fileID: 21300000, guid: 4262c34c219798e42ae3a3cbf8c68118, type: 3}
+  - {fileID: 4852167336598282744, guid: 149cd9db5cdbab94f9e9f50485ce6019, type: 3}
+  - {fileID: 0}
   house: {fileID: 1178641306}
   coinsText: {fileID: 352141058}
   scoreText: {fileID: 857430404}

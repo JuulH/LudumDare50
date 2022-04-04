@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Vector3 _playerStartPos;
     [SerializeField] private GameObject _playerGun;
+    [SerializeField] private SpriteRenderer activeGunSprite;
+    [SerializeField] private Sprite[] weaponSprites;
 
     public GameObject house;
     private HouseHealth _houseHealth;
@@ -137,6 +139,7 @@ public class GameManager : MonoBehaviour
         }
 
         _weaponUpgrades += 1;
+        activeGunSprite.sprite = weaponSprites[_weaponUpgrades];
         UpdateUpgradeCosts();
     }
 
