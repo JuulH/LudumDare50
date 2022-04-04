@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private float initialSpawnFrequency;
     [SerializeField] private float difficultyIncreaseModifier;
     [SerializeField] private TextMeshProUGUI currentSpawnFreqText;
+    [SerializeField] private float delayAfterWaveComplete;
 
     [SerializeField] private int initialEnemiesAmount;
     private int _enemiesAmount;
@@ -72,8 +74,14 @@ public class SpawnManager : MonoBehaviour
         _activeEnemies.Remove(enemy);
         if (_spawnedEnemies == _enemiesAmount && _activeEnemies.Count == 0)
         {
-            gameManager.WaveComplete(_waveNumber);
-            IncreaseDifficulty();
+            StartCoroutine(CompleteWaveAfterXSeconds());
         }
+    }
+
+    private IEnumerator CompleteWaveAfterXSeconds()
+    {
+        yield return new WaitForSeconds(delayAfterWaveComplete);
+        gameManager.WaveComplete(_waveNumber);
+        IncreaseDifficulty();
     }
 }

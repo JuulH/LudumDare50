@@ -15926,10 +15926,9 @@ MonoBehaviour:
   - {fileID: 807806710}
   enemy: {fileID: 8750849789051368674, guid: 2e72904fb33f2524f907bf0bcf9cfcb7, type: 3}
   initialSpawnFrequency: 2
-  difficultyIncreaseFrequency: 15
   difficultyIncreaseModifier: 0.9
-  nextDifficultyIncreaseInText: {fileID: 1158114346}
   currentSpawnFreqText: {fileID: 1092129636}
+  delayAfterWaveComplete: 3
   initialEnemiesAmount: 3
   gameManager: {fileID: 1229663065}
 --- !u!4 &643432328
@@ -17487,9 +17486,9 @@ MonoBehaviour:
   weaponUpgradeCost: 3
   speedUpgradeCost: 2
   fortifyUpgradeCost: 1
-  weaponUpgradeCostUi: {fileID: 1906912922}
-  speedUpgradeCostUi: {fileID: 1477921308}
-  fortifyUpgradeCostUi: {fileID: 822061778}
+  weaponUpgradeCostContainer: {fileID: 1906912922}
+  speedUpgradeCostContainer: {fileID: 1477921308}
+  fortifyUpgradeCostContainer: {fileID: 822061778}
 --- !u!4 &1229663066
 Transform:
   m_ObjectHideFlags: 0
