@@ -121,4 +121,9 @@ public class SoundManager : MonoBehaviour
     {
         this.upgradeBuy.Play();
     }
+
+    public void PlayHouseCollapse()
+    {
+        this.houseCollapse.Play();
+    }
 }

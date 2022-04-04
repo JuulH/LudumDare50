@@ -35,7 +35,7 @@ public class HouseHealth : MonoBehaviour, Health
         if (_currentHealth <= 0)
         {
             gameManager.GameOver();
-            _soundManager.PlayPlayerDie();
+            _soundManager.PlayHouseCollapse();
         }
     }
 

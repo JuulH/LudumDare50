@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour
     private static readonly int IsMoving = Animator.StringToHash("IsMoving");
     private static readonly int IsStanding = Animator.StringToHash("IsStanding");
 
-    void Awake()
+    void Start()
     {
         _aiPath = GetComponent<AIPath>();
         _animator = GetComponent<Animator>();
