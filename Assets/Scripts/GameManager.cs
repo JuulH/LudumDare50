@@ -74,6 +74,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject playerHealthBar;
     [SerializeField] private GameObject houseHealthBar;
 
+    private float _totalTimeElapsed;
+    private int wavesCompleted = 0;
+
 
     void Start()
     {
@@ -84,10 +87,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         SetPlayerControlsEnabled(false);
         soundManager.PlayMenuMusic();
+        _totalTimeElapsed = 0;
     }
 
     void Update()
     {
+        _totalTimeElapsed += Time.deltaTime;
         elapsedTime += Time.deltaTime;
         mins = Mathf.Floor(elapsedTime / 60);
         secs = Mathf.RoundToInt(elapsedTime - mins * 60);
@@ -207,6 +212,7 @@ public class GameManager : MonoBehaviour
         playerHealthBar.transform.SetParent(intermissionCanvas.transform, false);
         houseHealthBar.transform.SetParent(intermissionCanvas.transform, false);
         intermissionCanvas.SetActive(true);
+        wavesCompleted++;
     }
 
     public void NextWave()
@@ -274,8 +280,9 @@ public class GameManager : MonoBehaviour
         soundManager.StopGameMusic();
         soundManager.PlayGameoverSound();
         
-        gameOverOverviewText.text = string.Format("Coins: {0}\nScore: {1}\nTime: {2}", coins.ToString(), score.ToString(),
-            overviewTime);
+        string totalTime = string.Format("{0:00}:{1:00}", mins, secs);
+        gameOverOverviewText.text = string.Format("Waves: {0}\nScore: {1}\nTime: {2}", wavesCompleted.ToString(), score.ToString(),
+            totalTime);
         
         SetPlayerControlsEnabled(false);
         Time.timeScale = 0;
