@@ -57,6 +57,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverMenuCanvas;
 
     [SerializeField] private SoundManager soundManager;
+    
+    [SerializeField] private TMP_Text gameOverOverviewText;
+
 
     void Start()
     {
@@ -204,6 +207,10 @@ public class GameManager : MonoBehaviour
     {
         inGameCanvas.SetActive(false);
         gameOverMenuCanvas.SetActive(true);
+        
+        gameOverOverviewText.text = string.Format("Coins: {0}\nScore: {1}\nTime: {2}", coins.ToString(), score.ToString(),
+            overviewTime);
+        
         SetPlayerControlsEnabled(false);
         Time.timeScale = 0;
     }
