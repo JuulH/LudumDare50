@@ -5,6 +5,7 @@ using TMPro;
 using Player;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject intermissionCanvas;
     public TMP_Text overviewText;
+    public TMP_Text waveNumberText;
     private float elapsedTime;
     private float mins;
     private float secs;
@@ -40,7 +42,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int maxSpeedUpgrades = 3;
     [SerializeField] private int maxFortifyUpgrades = 3;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerAttack = player.GetComponent<PlayerAttack>();
@@ -49,7 +50,6 @@ public class GameManager : MonoBehaviour
         houseHealth = house.GetComponent<HouseHealth>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         elapsedTime += Time.deltaTime;
@@ -101,11 +101,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void WaveComplete()
+    public void WaveComplete(int waveNumCompleted)
     {
         playerAttack.isControlsEnabled = false;
         Time.timeScale = 0f;
         intermissionCanvas.SetActive(true);
+        waveNumberText.text = "" + waveNumCompleted;
     }
 
     public void NextWave()

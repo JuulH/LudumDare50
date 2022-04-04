@@ -15,37 +15,41 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nextDifficultyIncreaseInText;
     [SerializeField] private TextMeshProUGUI currentSpawnFreqText;
 
-    [SerializeField] private int enemiesAmount;
-    private int spawnedEnemies;
+    [FormerlySerializedAs("enemiesAmount")] [SerializeField] private int initialEnemiesAmount;
+    private int _enemiesAmount;
+    private int _spawnedEnemies;
 
-    private List<GameObject> activeEnemies;
+    private List<GameObject> _activeEnemies;
 
     private float _spawnFrequency;
     private float _spawnTimer;
     private float _difficultyIncreaseTimer;
+    private int _waveNumber;
 
-    private GameObject spawnedEnemy;
+    private GameObject _spawnedEnemy;
 
     [SerializeField] GameManager gameManager;
 
     private void Start()
     {
-        activeEnemies = new List<GameObject>();
+        _activeEnemies = new List<GameObject>();
         _spawnFrequency = initialSpawnFrequency;
         currentSpawnFreqText.text = "" + _spawnFrequency;
+        _enemiesAmount = initialEnemiesAmount;
+        _waveNumber = 1;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if(spawnedEnemies < enemiesAmount)
+        if(_spawnedEnemies < _enemiesAmount)
         {
             _spawnTimer += Time.deltaTime;
             if (_spawnTimer > _spawnFrequency)
             {
                 SpawnEnemy();
-                spawnedEnemies += 1;
+                _spawnedEnemies += 1;
                 _spawnTimer = 0;
             }
             //Debug.Log(activeEnemies.Count + " - " + enemiesAmount);
@@ -62,7 +66,9 @@ public class SpawnManager : MonoBehaviour
 
     private void IncreaseDifficulty()
     {
+        _waveNumber++;
         _spawnFrequency *= difficultyIncreaseModifier;
+        _enemiesAmount += initialEnemiesAmount * _waveNumber;
         currentSpawnFreqText.text = "" + _spawnFrequency;
     }
 
@@ -70,16 +76,17 @@ public class SpawnManager : MonoBehaviour
     {
         int randomSpawnIndx = Random.Range(0, spawnPoints.Count);
         Transform randomSpawnPoint = spawnPoints[randomSpawnIndx];
-        spawnedEnemy = Instantiate(enemy, randomSpawnPoint.position, enemy.transform.rotation);
-        activeEnemies.Add(spawnedEnemy);
+        _spawnedEnemy = Instantiate(enemy, randomSpawnPoint.position, enemy.transform.rotation);
+        _activeEnemies.Add(_spawnedEnemy);
     }
 
     public void RemoveEnemy(GameObject enemy)
     {
-        activeEnemies.Remove(enemy);
-        if (spawnedEnemies == enemiesAmount && activeEnemies.Count == 0)
+        _activeEnemies.Remove(enemy);
+        if (_spawnedEnemies == _enemiesAmount && _activeEnemies.Count == 0)
         {
-            gameManager.WaveComplete();
+            gameManager.WaveComplete(_waveNumber);
+            IncreaseDifficulty();
         }
         //Debug.Log(activeEnemies.Count);
     }
