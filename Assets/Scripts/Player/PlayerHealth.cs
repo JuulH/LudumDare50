@@ -7,15 +7,14 @@ using Vector2 = UnityEngine.Vector2;
 
 public class PlayerHealth : MonoBehaviour, Health
 {
-    [SerializeField] private float maxHealth = 100;
+    [SerializeField] public float maxHealth = 100;
     [SerializeField] private UIManager uiManager;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private GameObject weaponAttachment;
     [SerializeField] private GameObject playerDeath;
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
-    private float _currentHealth;
-    private bool _isInvincible;
-    private bool _isDead;
+    public float _currentHealth;
+    public bool _isDead;
 
     private SoundManager _soundManager;
     private Animator _animator;

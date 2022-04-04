@@ -227,6 +227,24 @@ public class GameManager : MonoBehaviour
         UpdateUpgradeCostFor(speedUpgradeCostContainer, _speedUpgrades, speedUpgradeCost, maxSpeedUpgrades, speedUpgradeButton);
         UpdateUpgradeCostFor(repairUpgradeCostContainer, _repairUpgrades, repairUpgradeCost, maxRepairUpgrades, repairUpgradeButton);
         UpdateUpgradeCostFor(recoverUpgradeCostContainer, _recoverUpgrades, recoverUpgradeCost, maxRecoverUpgrades, recoverUpgradeButton);
+        DisableRepairUpgradeIfFullHouseHp();
+        DisableRecoverUpgradeIfFullPlayerHp();
+    }
+
+    private void DisableRecoverUpgradeIfFullPlayerHp()
+    {
+        if (_houseHealth._currentHealth >= _houseHealth.maxHealth)
+        {
+            repairUpgradeButton.interactable = false;
+        }
+    }
+
+    private void DisableRepairUpgradeIfFullHouseHp()
+    {
+        if (_playerHealth._currentHealth >= _playerHealth.maxHealth)
+        {
+            recoverUpgradeButton.interactable = false;
+        }
     }
 
     private void UpdateUpgradeCostFor(UpgradeCost upgradeCostContainer, int upgradesHappened, int upgradeCost, 
@@ -263,26 +281,18 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    // private IEnumerator StartGameOver()
-    // {
-    //     yield return new WaitForSeconds()
-    // }
-
     public static void AddCoin()
     {
         coins += 1;
-        // Debug.Log("Coins : " + coins);
     }
 
     public static void RemoveCoins(int amountToRemove)
     {
         coins -= amountToRemove;
-        // Debug.Log("Coins after removal: " + coins);
     }
 
     public static void AddScore(int points)
     {
         score += points;
-        // Debug.Log("Score " + score);
     }
 }

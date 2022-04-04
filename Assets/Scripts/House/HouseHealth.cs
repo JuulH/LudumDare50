@@ -7,7 +7,7 @@ public class HouseHealth : MonoBehaviour, Health
     public float maxHealth = 100;
     [SerializeField] private UIManager uiManager;
     [SerializeField] private GameManager gameManager;
-    private float _currentHealth;
+    public float _currentHealth;
     private bool _isInvincible = false;
 
     private SoundManager _soundManager;
