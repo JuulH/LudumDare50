@@ -18478,7 +18478,7 @@ MonoBehaviour:
   fortifyUpgradeButton: {fileID: 870344545}
   repairUpgradeButton: {fileID: 870344544}
   recoverUpgradeButton: {fileID: 870344543}
-  maxWeaponUpgrades: 3
+  maxWeaponUpgrades: 2
   maxSpeedUpgrades: 3
   maxFortifyUpgrades: 3
   maxRecoverUpgrades: 999
