@@ -3659,6 +3659,10 @@ PrefabInstance:
       propertyPath: cinemachineVirtualCamera
       value: 
       objectReference: {fileID: 1645294498}
+    - target: {fileID: 326397718, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1949692990, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: _screenShake
       value: 
