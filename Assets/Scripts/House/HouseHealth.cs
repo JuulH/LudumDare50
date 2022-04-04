@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HouseHealth : MonoBehaviour, Health
 {
-    [SerializeField] private float maxHealth = 100;
+    public float maxHealth = 100;
     [SerializeField] private UIManager uiManager;
     private float _currentHealth;
     private bool _isInvincible = false;
@@ -30,4 +30,14 @@ public class HouseHealth : MonoBehaviour, Health
         }
     }
 
+    public void updateHealthBar()
+    {
+        uiManager.SetHouseMaxHealth(maxHealth);
+        uiManager.SetHouseCurrentHealth(_currentHealth);
+    }
+
+    public void ResetHealth()
+    {
+        _currentHealth = maxHealth;
+    }
 }

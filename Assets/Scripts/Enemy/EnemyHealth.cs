@@ -7,6 +7,12 @@ public class EnemyHealth : MonoBehaviour, Health
 {
     [SerializeField] private GameObject enemyDeath;
     [SerializeField] private GameObject coinPrefab;
+    private SpawnManager spawnManager;
+
+    private void Awake()
+    {
+        spawnManager = GameObject.FindGameObjectWithTag("SpawnManager").GetComponent<SpawnManager>();
+    }
 
     public void TakeDamage(float damage)
     {
@@ -14,6 +20,7 @@ public class EnemyHealth : MonoBehaviour, Health
         GameManager.AddScore(100);
         Instantiate(enemyDeath, enemyTransform.position, enemyTransform.rotation);
         Instantiate(coinPrefab, enemyTransform.position, enemyTransform.rotation);
+        spawnManager.RemoveEnemy(this.gameObject);
         Destroy(gameObject);
     }
 }

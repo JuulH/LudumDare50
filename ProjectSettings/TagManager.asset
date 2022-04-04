@@ -11,6 +11,7 @@ TagManager:
   - HouseTarget
   - AreaAroundHouse
   - EnemyProjectile
+  - SpawnManager
   layers:
   - Default
   - TransparentFX

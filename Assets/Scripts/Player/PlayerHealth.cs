@@ -45,4 +45,9 @@ public class PlayerHealth : MonoBehaviour, Health
         yield return new WaitForSeconds(xSeconds);
         _isInvincible = false;
     }
+
+    public void ResetHealth()
+    {
+        _currentHealth = maxHealth;
+    }
 }

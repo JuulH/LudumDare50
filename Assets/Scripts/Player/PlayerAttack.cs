@@ -11,7 +11,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform projectileSpawnPos;
 
-    [SerializeField] private float attackCooldown = 1.5f;
+    public float attackCooldown = 1.5f;
     private float _timeSinceLastAttack = 999f;
 
     private SoundManager _soundManager;
