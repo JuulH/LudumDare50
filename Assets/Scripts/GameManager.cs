@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     private PlayerMovementController _playerMovement;
     private PlayerHealth _playerHealth;
 
+    [SerializeField] private Vector3 _playerStartPos;
+    [SerializeField] private GameObject _playerGun;
+
     public GameObject house;
     private HouseHealth _houseHealth;
 
@@ -81,6 +84,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        _playerGun.SetActive(true);
+        player.transform.position = _playerStartPos;
         inGameCanvas.SetActive(true);
         startMenuCanvas.SetActive(false);
         Time.timeScale = 1f;
@@ -152,6 +157,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         waveNumberText.text = "" + waveNumCompleted;
         UpdateUpgradeCosts();
+        inGameCanvas.SetActive(false);
         intermissionCanvas.SetActive(true);
     }
 
@@ -163,6 +169,7 @@ public class GameManager : MonoBehaviour
         _houseHealth.ResetHealth();
         _playerHealth.ResetHealth();
         _houseHealth.updateHealthBar();
+        inGameCanvas.SetActive(true);
         intermissionCanvas.SetActive(false);
     }
 
