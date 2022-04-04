@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text gameOverOverviewText;
     [SerializeField] private GameObject playerHealthBar;
     [SerializeField] private GameObject houseHealthBar;
+    [SerializeField] private GameObject cinemachineStartCamera;
 
     private float _totalTimeElapsed;
     private int wavesCompleted = 0;
@@ -113,6 +114,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         SetPlayerControlsEnabled(true);
         soundManager.PlayGameMusic();
+        cinemachineStartCamera.SetActive(false);
     }
 
     public void RestartGame()

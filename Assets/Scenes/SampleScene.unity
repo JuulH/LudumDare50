@@ -19951,6 +19951,7 @@ MonoBehaviour:
   gameOverOverviewText: {fileID: 903343063}
   playerHealthBar: {fileID: 1231013339}
   houseHealthBar: {fileID: 1568849675}
+  cinemachineStartCamera: {fileID: 1707813124}
 --- !u!4 &1229663066
 Transform:
   m_ObjectHideFlags: 0
