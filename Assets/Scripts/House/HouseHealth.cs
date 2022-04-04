@@ -29,7 +29,7 @@ public class HouseHealth : MonoBehaviour, Health
     {
         _currentHealth -= damage;
         uiManager.SetHouseCurrentHealth(_currentHealth);
-        _screenShake.ShakeCamera(1, 0.5f);
+        _screenShake.ShakeCamera(0.5f, 0.25f);
         if (_currentHealth <= 0)
         {
             gameManager.GameOver();
