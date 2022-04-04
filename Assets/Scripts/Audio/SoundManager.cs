@@ -29,26 +29,25 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-         if(isMenu)
-         {
-            if(currentMusicIndex == 0 && !menuMusicAS.isPlaying)
+        if (isMenu)
+        {
+            if (Application.isFocused && currentMusicIndex == 0 && !menuMusicAS.isPlaying)
             {
                 currentMusicIndex++;
                 AudioClip secondTrack = menuMusicAC[currentMusicIndex];
                 menuMusicAS.clip = secondTrack;
                 menuMusicAS.loop = true;
                 menuMusicAS.Play();
-            }  
-         }
-         else if(isGame)
+            }
+        }
+        else if (isGame)
         {
-            if(currentMusicIndex == 0 && !battleMusicAS.isPlaying)
+            if (Application.isFocused && currentMusicIndex == 0 && !battleMusicAS.isPlaying)
             {
                 currentMusicIndex++;
                 AudioClip secondTrack = battleMusicAC[currentMusicIndex];
@@ -57,7 +56,6 @@ public class SoundManager : MonoBehaviour
                 battleMusicAS.Play();
             }
         }
-
     }
 
     public void PlayMenuMusic()
@@ -123,6 +121,4 @@ public class SoundManager : MonoBehaviour
     {
         this.upgradeBuy.Play();
     }
-
-
 }
