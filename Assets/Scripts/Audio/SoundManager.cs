@@ -21,7 +21,11 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource menuClick; // I think this one is going to be alone at the menu prefab
     [SerializeField] private AudioSource menuMusicAS;
     [SerializeField] private AudioSource battleMusicAS;
-    
+
+    private bool isMenu;
+    private bool isGame;
+
+    private int currentMusicIndex;
 
     void Start()
     {
@@ -31,7 +35,53 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         if(isMenu)
+         {
+            if(currentMusicIndex == 0 && !menuMusicAS.isPlaying)
+            {
+                currentMusicIndex++;
+                AudioClip secondTrack = menuMusicAC[currentMusicIndex];
+                menuMusicAS.clip = secondTrack;
+                menuMusicAS.loop = true;
+                menuMusicAS.Play();
+            }  
+         }
+         else if(isGame)
+        {
+            if(currentMusicIndex == 0 && !battleMusicAS.isPlaying)
+            {
+                currentMusicIndex++;
+                AudioClip secondTrack = battleMusicAC[currentMusicIndex];
+                battleMusicAS.clip = secondTrack;
+                battleMusicAS.loop = true;
+                battleMusicAS.Play();
+            }
+        }
+
+    }
+
+    public void PlayMenuMusic()
+    {
+        isMenu = true;
+        isGame = false;
+        currentMusicIndex = 0;
+        AudioClip firstTrack = menuMusicAC[currentMusicIndex];
+        menuMusicAS.clip = firstTrack;
+        menuMusicAS.loop = false;
+        battleMusicAS.Stop();
+        menuMusicAS.Play();
+    }
+
+    public void PlayGameMusic()
+    {
+        isGame = true;
+        isMenu = false;
+        currentMusicIndex = 0;
+        AudioClip firstTrack = battleMusicAC[currentMusicIndex];
+        battleMusicAS.clip = firstTrack;
+        battleMusicAS.loop = false;
+        menuMusicAS.Stop();
+        battleMusicAS.Play();
     }
 
     public void PlayEnemyDie()

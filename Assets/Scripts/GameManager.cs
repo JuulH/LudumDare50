@@ -53,6 +53,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject startMenuCanvas;
     [SerializeField] private GameObject gameOverMenuCanvas;
 
+    [SerializeField] private SoundManager soundManager;
+
     void Start()
     {
         _playerAttack = player.GetComponent<PlayerAttack>();
@@ -61,6 +63,7 @@ public class GameManager : MonoBehaviour
         _houseHealth = house.GetComponent<HouseHealth>();
         Time.timeScale = 0f;
         SetPlayerControlsEnabled(false);
+        soundManager.PlayMenuMusic();
     }
 
     void Update()
@@ -82,6 +85,7 @@ public class GameManager : MonoBehaviour
         startMenuCanvas.SetActive(false);
         Time.timeScale = 1f;
         SetPlayerControlsEnabled(true);
+        soundManager.PlayGameMusic();
     }
 
     public void RestartGame()

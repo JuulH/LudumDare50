@@ -10,6 +10,13 @@ public class HouseHealth : MonoBehaviour, Health
     private float _currentHealth;
     private bool _isInvincible = false;
 
+    private SoundManager _soundManager;
+
+    private void Awake()
+    {
+        _soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
+    }
+
     void Start()
     {
         _currentHealth = maxHealth;
@@ -28,6 +35,7 @@ public class HouseHealth : MonoBehaviour, Health
         if (_currentHealth <= 0)
         {
             gameManager.GameOver();
+            _soundManager.PlayPlayerDie();
         }
     }
 
