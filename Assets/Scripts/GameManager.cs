@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
         {
             weaponUpgradeButton.interactable = false;
         }
+        UpdateUpgradeCosts();
     }
 
     public void FortifyUpgrade()
@@ -106,7 +107,6 @@ public class GameManager : MonoBehaviour
         if (coins < fortifyUpgradeCostContainer.Cost()) return;
         if (fortifyUpgrades < maxFortifyUpgrades)
         {
-            coins -= fortifyUpgradeCostContainer.Cost();
             RemoveCoins(fortifyUpgradeCostContainer.Cost());
             houseHealth.maxHealth += 100f;
         }
@@ -115,6 +115,7 @@ public class GameManager : MonoBehaviour
         {
             fortifyUpgradeButton.interactable = false;
         }
+        UpdateUpgradeCosts();
     }
 
     public void WaveComplete(int waveNumCompleted)
