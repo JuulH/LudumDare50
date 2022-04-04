@@ -10,12 +10,12 @@ using UnityEngine.Serialization;
 public class GameManager : MonoBehaviour
 {
     public GameObject player;
-    private PlayerAttack playerAttack;
-    private PlayerMovementController playerMovement;
-    private PlayerHealth playerHealth;
+    private PlayerAttack _playerAttack;
+    private PlayerMovementController _playerMovement;
+    private PlayerHealth _playerHealth;
 
     public GameObject house;
-    private HouseHealth houseHealth;
+    private HouseHealth _houseHealth;
 
     public static int score;
     public static int coins;
@@ -34,9 +34,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button weaponUpgradeButton;
     [SerializeField] private Button speedUpgradeButton;
     [SerializeField] private Button fortifyUpgradeButton;
-    private int weaponUpgrades = 0;
-    private int speedUpgrades = 0;
-    private int fortifyUpgrades = 0;
+    private int _weaponUpgrades;
+    private int _speedUpgrades;
+    private int _fortifyUpgrades;
     [SerializeField] private int maxWeaponUpgrades = 3;
     [SerializeField] private int maxSpeedUpgrades = 3;
     [SerializeField] private int maxFortifyUpgrades = 3;
@@ -48,13 +48,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] private UpgradeCost weaponUpgradeCostContainer;
     [SerializeField] private UpgradeCost speedUpgradeCostContainer;
     [SerializeField] private UpgradeCost fortifyUpgradeCostContainer;
+    
+    [SerializeField] private GameObject inGameCanvas;
+    [SerializeField] private GameObject startMenuCanvas;
 
     void Start()
     {
-        playerAttack = player.GetComponent<PlayerAttack>();
-        playerHealth = player.GetComponent<PlayerHealth>();
-        playerMovement = player.GetComponent<PlayerMovementController>();
-        houseHealth = house.GetComponent<HouseHealth>();
+        _playerAttack = player.GetComponent<PlayerAttack>();
+        _playerHealth = player.GetComponent<PlayerHealth>();
+        _playerMovement = player.GetComponent<PlayerMovementController>();
+        _houseHealth = house.GetComponent<HouseHealth>();
+        Time.timeScale = 0f;
+        SetPlayerControlsEnabled(false);
     }
 
     void Update()
@@ -70,48 +75,64 @@ public class GameManager : MonoBehaviour
         overviewText.SetText(infoText);
     }
 
+    public void StartGame()
+    {
+        inGameCanvas.SetActive(true);
+        startMenuCanvas.SetActive(false);
+        Time.timeScale = 1f;
+        SetPlayerControlsEnabled(true);
+    }
+
+    private void SetPlayerControlsEnabled(bool isEnabled)
+    {
+        _playerMovement.isControlsEnabled = isEnabled;
+        _playerAttack.isControlsEnabled = isEnabled;
+        _playerMovement.enabled = isEnabled;
+        _playerAttack.enabled = isEnabled;
+    }
+
     public void SpeedUpgrade()
     {
         if (coins < speedUpgradeCostContainer.Cost()) return;
-        if (speedUpgrades < maxSpeedUpgrades)
+        if (_speedUpgrades < maxSpeedUpgrades)
         {
-            playerMovement.speed += 1;
+            _playerMovement.speed += 1;
             RemoveCoins(speedUpgradeCostContainer.Cost());
         }
 
-        speedUpgrades += 1;
+        _speedUpgrades += 1;
         UpdateUpgradeCosts();
     }
 
     public void GunUpgrade()
     {
         if (coins < weaponUpgradeCostContainer.Cost()) return;
-        if (weaponUpgrades < maxWeaponUpgrades)
+        if (_weaponUpgrades < maxWeaponUpgrades)
         {
-            playerAttack.attackCooldown -= .05f;
+            _playerAttack.attackCooldown -= .05f;
             RemoveCoins(weaponUpgradeCostContainer.Cost());
         }
 
-        weaponUpgrades += 1;
+        _weaponUpgrades += 1;
         UpdateUpgradeCosts();
     }
 
     public void FortifyUpgrade()
     {
         if (coins < fortifyUpgradeCostContainer.Cost()) return;
-        if (fortifyUpgrades < maxFortifyUpgrades)
+        if (_fortifyUpgrades < maxFortifyUpgrades)
         {
-            houseHealth.maxHealth += 100f;
+            _houseHealth.maxHealth += 100f;
             RemoveCoins(fortifyUpgradeCostContainer.Cost());
         }
 
-        fortifyUpgrades += 1;
+        _fortifyUpgrades += 1;
         UpdateUpgradeCosts();
     }
 
     public void WaveComplete(int waveNumCompleted)
     {
-        playerAttack.isControlsEnabled = false;
+        _playerAttack.isControlsEnabled = false;
         Time.timeScale = 0f;
         waveNumberText.text = "" + waveNumCompleted;
         UpdateUpgradeCosts();
@@ -120,20 +141,20 @@ public class GameManager : MonoBehaviour
 
     public void NextWave()
     {
-        playerAttack.isControlsEnabled = true;
+        _playerAttack.isControlsEnabled = true;
         Time.timeScale = 1f;
         elapsedTime = 0f;
-        houseHealth.ResetHealth();
-        playerHealth.ResetHealth();
-        houseHealth.updateHealthBar();
+        _houseHealth.ResetHealth();
+        _playerHealth.ResetHealth();
+        _houseHealth.updateHealthBar();
         intermissionCanvas.SetActive(false);
     }
 
     private void UpdateUpgradeCosts()
     {
-        UpdateUpgradeCostFor(weaponUpgradeCostContainer, weaponUpgrades, weaponUpgradeCost, maxWeaponUpgrades, weaponUpgradeButton);
-        UpdateUpgradeCostFor(fortifyUpgradeCostContainer, fortifyUpgrades, fortifyUpgradeCost, maxFortifyUpgrades, fortifyUpgradeButton);
-        UpdateUpgradeCostFor(speedUpgradeCostContainer, speedUpgrades, speedUpgradeCost, maxSpeedUpgrades, speedUpgradeButton);
+        UpdateUpgradeCostFor(weaponUpgradeCostContainer, _weaponUpgrades, weaponUpgradeCost, maxWeaponUpgrades, weaponUpgradeButton);
+        UpdateUpgradeCostFor(fortifyUpgradeCostContainer, _fortifyUpgrades, fortifyUpgradeCost, maxFortifyUpgrades, fortifyUpgradeButton);
+        UpdateUpgradeCostFor(speedUpgradeCostContainer, _speedUpgrades, speedUpgradeCost, maxSpeedUpgrades, speedUpgradeButton);
     }
 
     private void UpdateUpgradeCostFor(UpgradeCost upgradeCostContainer, int upgradesHappened, int upgradeCost, 
