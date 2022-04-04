@@ -153,7 +153,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 4852167336598282744, guid: 149cd9db5cdbab94f9e9f50485ce6019, type: 3}
+  m_Sprite: {fileID: -6911898592872783027, guid: 013060993ecb71540a73cd0080344015, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
   maxHealth: 100
   uiManager: {fileID: 0}
   gameManager: {fileID: 0}
-  invincibilityTimeAfterHit: 1
+  playerDeath: {fileID: 7999273372343968924, guid: 3804aa746b21466418a3897997222557, type: 3}
 --- !u!114 &1949692990
 MonoBehaviour:
   m_ObjectHideFlags: 0

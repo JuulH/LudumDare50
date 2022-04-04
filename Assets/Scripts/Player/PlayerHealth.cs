@@ -1,20 +1,32 @@
 using System.Collections;
+using System.Numerics;
+using Cinemachine;
+using Player;
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
 
 public class PlayerHealth : MonoBehaviour, Health
 {
     [SerializeField] private float maxHealth = 100;
     [SerializeField] private UIManager uiManager;
     [SerializeField] private GameManager gameManager;
-    [SerializeField] private float invincibilityTimeAfterHit = 1f;
+    [SerializeField] private GameObject weaponAttachment;
+    [SerializeField] private GameObject playerDeath;
+    [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
     private float _currentHealth;
     private bool _isInvincible;
+    private bool _isDead;
 
     private SoundManager _soundManager;
+    private Animator _animator;
+    private static readonly int IsDead = Animator.StringToHash("IsDead");
+    private PlayerMovementController _playerMovementController;
 
     private void Awake()
     {
         _soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
+        _animator = GetComponent<Animator>();
+        _playerMovementController = GetComponent<PlayerMovementController>();
     }
 
     void Start()
@@ -26,25 +38,33 @@ public class PlayerHealth : MonoBehaviour, Health
 
     public void TakeDamage(float damage)
     {
-        if (!_isInvincible)
+        if (_isDead)
         {
-            _currentHealth -= damage;
-            uiManager.SetPlayerCurrentHealth(_currentHealth);
-            StartCoroutine(MakeInvicibleFor(invincibilityTimeAfterHit));
+            _playerMovementController.dir = Vector2.zero;
+            return;
         }
+        _currentHealth -= damage;
+        uiManager.SetPlayerCurrentHealth(_currentHealth);
 
-        if(_currentHealth <= 0)
+        if (_currentHealth <= 0)
         {
+            weaponAttachment.SetActive(false);
+            _playerMovementController.enabled = false;
+            _playerMovementController.dir = Vector2.zero;
+            GetComponent<SpriteRenderer>().enabled = false;
+            GameObject createdDeathAnimation = Instantiate(playerDeath, transform.position, transform.rotation, transform);
+            cinemachineVirtualCamera.LookAt = createdDeathAnimation.transform;
+
             _soundManager.PlayPlayerDie();
-            gameManager.GameOver();
+            _isDead = true;
+            StartCoroutine(StartGameOver(3));
         }
     }
 
-    public IEnumerator MakeInvicibleFor(float xSeconds)
+    private IEnumerator StartGameOver(int delay)
     {
-        _isInvincible = true;
-        yield return new WaitForSeconds(xSeconds);
-        _isInvincible = false;
+        yield return new WaitForSeconds(delay);
+        gameManager.GameOver();
     }
 
     public void ResetHealth()
@@ -59,6 +79,7 @@ public class PlayerHealth : MonoBehaviour, Health
         {
             _currentHealth = maxHealth;
         }
+
         uiManager.SetPlayerCurrentHealth(_currentHealth);
     }
 }
