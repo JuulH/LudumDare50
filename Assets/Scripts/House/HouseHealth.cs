@@ -8,13 +8,14 @@ public class HouseHealth : MonoBehaviour, Health
     [SerializeField] private UIManager uiManager;
     [SerializeField] private GameManager gameManager;
     public float _currentHealth;
-    private bool _isInvincible = false;
 
     private SoundManager _soundManager;
+    private ScreenShake _screenShake;
 
     private void Awake()
     {
         _soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
+        _screenShake = GameObject.FindWithTag("Cinemachine").GetComponent<ScreenShake>();
     }
 
     void Start()
@@ -26,12 +27,9 @@ public class HouseHealth : MonoBehaviour, Health
 
     public void TakeDamage(float damage)
     {
-        if (!_isInvincible)
-        {
-            _currentHealth -= damage;
-            uiManager.SetHouseCurrentHealth(_currentHealth);
-        }
-
+        _currentHealth -= damage;
+        uiManager.SetHouseCurrentHealth(_currentHealth);
+        _screenShake.ShakeCamera(1, 0.5f);
         if (_currentHealth <= 0)
         {
             gameManager.GameOver();
@@ -57,6 +55,7 @@ public class HouseHealth : MonoBehaviour, Health
         {
             _currentHealth = maxHealth;
         }
+
         uiManager.SetHouseCurrentHealth(_currentHealth);
     }
 }
