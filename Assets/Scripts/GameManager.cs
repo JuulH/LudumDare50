@@ -107,6 +107,7 @@ public class GameManager : MonoBehaviour
     public void SpeedUpgrade()
     {
         if (coins < speedUpgradeCostContainer.Cost()) return;
+        soundManager.PlayerUpgradeBuy();
         if (_speedUpgrades < maxSpeedUpgrades)
         {
             _playerMovement.speed += 1;
@@ -120,6 +121,7 @@ public class GameManager : MonoBehaviour
     public void GunUpgrade()
     {
         if (coins < weaponUpgradeCostContainer.Cost()) return;
+        soundManager.PlayerUpgradeBuy();
         if (_weaponUpgrades < maxWeaponUpgrades)
         {
             _playerAttack.attackCooldown -= .05f;
@@ -133,6 +135,7 @@ public class GameManager : MonoBehaviour
     public void FortifyUpgrade()
     {
         if (coins < fortifyUpgradeCostContainer.Cost()) return;
+        soundManager.PlayerUpgradeBuy();
         if (_fortifyUpgrades < maxFortifyUpgrades)
         {
             _houseHealth.maxHealth += 100f;
