@@ -20122,7 +20122,7 @@ MonoBehaviour:
   weaponUpgradeButton: {fileID: 450024352}
   speedUpgradeButton: {fileID: 1799592766}
   fortifyUpgradeButton: {fileID: 992491738}
-  maxWeaponUpgrades: 1
+  maxWeaponUpgrades: 3
   maxSpeedUpgrades: 3
   maxFortifyUpgrades: 3
   weaponUpgradeCost: 3
