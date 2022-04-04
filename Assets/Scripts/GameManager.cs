@@ -9,7 +9,6 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-
     public GameObject player;
     private PlayerAttack playerAttack;
     private PlayerMovementController playerMovement;
@@ -41,7 +40,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int maxWeaponUpgrades = 3;
     [SerializeField] private int maxSpeedUpgrades = 3;
     [SerializeField] private int maxFortifyUpgrades = 3;
-    
+
     [SerializeField] private int weaponUpgradeCost = 1;
     [SerializeField] private int speedUpgradeCost = 1;
     [SerializeField] private int fortifyUpgradeCost = 1;
@@ -66,7 +65,8 @@ public class GameManager : MonoBehaviour
         overviewTime = string.Format("{0:00}:{1:00}", mins, secs);
         coinsText.SetText("$" + coins);
         scoreText.SetText(score.ToString());
-        infoText = string.Format("Coins: {0}\nScore: {1}\nTime: {2}", coins.ToString(), score.ToString(), overviewTime);
+        infoText = string.Format("Coins: {0}\nScore: {1}\nTime: {2}", coins.ToString(), score.ToString(),
+            overviewTime);
         overviewText.SetText(infoText);
     }
 
@@ -78,27 +78,21 @@ public class GameManager : MonoBehaviour
             playerMovement.speed += 1;
             RemoveCoins(speedUpgradeCostContainer.Cost());
         }
+
         speedUpgrades += 1;
-        if (speedUpgrades >= maxSpeedUpgrades)
-        {
-            speedUpgradeButton.interactable = false;
-        }
         UpdateUpgradeCosts();
     }
 
     public void GunUpgrade()
     {
         if (coins < weaponUpgradeCostContainer.Cost()) return;
-        if(weaponUpgrades < maxWeaponUpgrades)
+        if (weaponUpgrades < maxWeaponUpgrades)
         {
             playerAttack.attackCooldown -= .05f;
             RemoveCoins(weaponUpgradeCostContainer.Cost());
         }
+
         weaponUpgrades += 1;
-        if(weaponUpgrades >= maxWeaponUpgrades)
-        {
-            weaponUpgradeButton.interactable = false;
-        }
         UpdateUpgradeCosts();
     }
 
@@ -110,11 +104,8 @@ public class GameManager : MonoBehaviour
             RemoveCoins(fortifyUpgradeCostContainer.Cost());
             houseHealth.maxHealth += 100f;
         }
+
         fortifyUpgrades += 1;
-        if (fortifyUpgrades >= maxFortifyUpgrades)
-        {
-            fortifyUpgradeButton.interactable = false;
-        }
         UpdateUpgradeCosts();
     }
 
@@ -137,7 +128,7 @@ public class GameManager : MonoBehaviour
         houseHealth.updateHealthBar();
         intermissionCanvas.SetActive(false);
     }
-    
+
     private void UpdateUpgradeCosts()
     {
         UpdateWeaponUpgradeCost();
@@ -148,27 +139,40 @@ public class GameManager : MonoBehaviour
     private void UpdateFortifyUpgradeCost()
     {
         fortifyUpgradeCostContainer.SetCost((fortifyUpgrades + 1) * fortifyUpgradeCost);
-        if (coins < fortifyUpgradeCostContainer.Cost())
+        if (fortifyUpgrades >= maxFortifyUpgrades || coins < fortifyUpgradeCostContainer.Cost())
         {
             fortifyUpgradeButton.interactable = false;
+        }
+        else
+        {
+            fortifyUpgradeButton.interactable = true;
         }
     }
 
     private void UpdateSpeedUpgradeCost()
     {
         speedUpgradeCostContainer.SetCost((speedUpgrades + 1) * speedUpgradeCost);
-        if (coins < speedUpgradeCostContainer.Cost())
+        if (speedUpgrades >= maxSpeedUpgrades || coins < speedUpgradeCostContainer.Cost())
         {
             speedUpgradeButton.interactable = false;
+        }
+        else
+        {
+            speedUpgradeButton.interactable = true;
+
         }
     }
 
     private void UpdateWeaponUpgradeCost()
     {
         weaponUpgradeCostContainer.SetCost((weaponUpgrades + 1) * weaponUpgradeCost);
-        if (coins < weaponUpgradeCostContainer.Cost())
+        if (weaponUpgrades >= maxWeaponUpgrades || coins < weaponUpgradeCostContainer.Cost())
         {
             weaponUpgradeButton.interactable = false;
+        }
+        else
+        {
+            weaponUpgradeButton.interactable = true;
         }
     }
 
@@ -184,7 +188,7 @@ public class GameManager : MonoBehaviour
         coins += 1;
         Debug.Log("Coins : " + coins);
     }
-    
+
     public static void RemoveCoins(int amountToRemove)
     {
         coins -= amountToRemove;
@@ -196,5 +200,4 @@ public class GameManager : MonoBehaviour
         score += points;
         Debug.Log("Score " + score);
     }
-    
 }
