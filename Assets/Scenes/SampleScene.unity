@@ -655,6 +655,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b1c6c2ec9b584682bb3018bc87db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuMusicAC:
+  - {fileID: 8300000, guid: 24b910cbf3b4e1b42941230d0ca9713d, type: 3}
+  - {fileID: 8300000, guid: 839e1405802eb50448822f9a69a104df, type: 3}
+  battleMusicAC:
+  - {fileID: 8300000, guid: c0aeb3edb7cc52249a057fda2c84dd4f, type: 3}
+  - {fileID: 8300000, guid: 7b59dfeb5002a4c40974847e9a05575f, type: 3}
   enemyDie: {fileID: 24404185}
   playerShoot: {fileID: 24404184}
   catMeow: {fileID: 24404183}
@@ -665,6 +671,8 @@ MonoBehaviour:
   playerDie: {fileID: 24404189}
   upgradeBuy: {fileID: 24404188}
   menuClick: {fileID: 0}
+  menuMusicAS: {fileID: 0}
+  battleMusicAS: {fileID: 0}
 --- !u!82 &24404187
 AudioSource:
   m_ObjectHideFlags: 0

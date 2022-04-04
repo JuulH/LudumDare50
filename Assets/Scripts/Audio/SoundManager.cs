@@ -5,7 +5,8 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     //Audio CLips
-
+    [SerializeField] private AudioClip[] menuMusicAC;
+    [SerializeField] private AudioClip[] battleMusicAC;
 
     //Audio Sources
     [SerializeField] private AudioSource enemyDie;
@@ -18,6 +19,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource playerDie;
     [SerializeField] private AudioSource upgradeBuy;
     [SerializeField] private AudioSource menuClick; // I think this one is going to be alone at the menu prefab
+    [SerializeField] private AudioSource menuMusicAS;
+    [SerializeField] private AudioSource battleMusicAS;
     
 
     void Start()
