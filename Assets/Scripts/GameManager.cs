@@ -201,7 +201,7 @@ public class GameManager : MonoBehaviour
     {
         _playerAttack.isControlsEnabled = false;
         Time.timeScale = 0f;
-        waveNumberText.text = "" + waveNumCompleted;
+        waveNumberText.text = "Wave " + waveNumCompleted;
         UpdateUpgradeCosts();
         inGameCanvas.SetActive(false);
         playerHealthBar.transform.SetParent(intermissionCanvas.transform, false);
