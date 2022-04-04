@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private GameObject inGameCanvas;
     [SerializeField] private GameObject startMenuCanvas;
+    [SerializeField] private GameObject gameOverMenuCanvas;
 
     void Start()
     {
@@ -81,6 +82,14 @@ public class GameManager : MonoBehaviour
         startMenuCanvas.SetActive(false);
         Time.timeScale = 1f;
         SetPlayerControlsEnabled(true);
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        GameManager.score = 0;
+        GameManager.coins = 0;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void SetPlayerControlsEnabled(bool isEnabled)
@@ -177,12 +186,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static void GameOver()
+    public void GameOver()
     {
-        GameManager.score = 0;
-        GameManager.coins = 0;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        inGameCanvas.SetActive(false);
+        gameOverMenuCanvas.SetActive(true);
+        SetPlayerControlsEnabled(false);
+        Time.timeScale = 0;
     }
+
+    // private IEnumerator StartGameOver()
+    // {
+    //     yield return new WaitForSeconds()
+    // }
 
     public static void AddCoin()
     {

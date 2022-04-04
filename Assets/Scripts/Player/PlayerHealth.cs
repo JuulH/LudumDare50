@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour, Health
 {
     [SerializeField] private float maxHealth = 100;
     [SerializeField] private UIManager uiManager;
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private float invincibilityTimeAfterHit = 1f;
     private float _currentHealth;
     private bool _isInvincible;
@@ -35,7 +36,7 @@ public class PlayerHealth : MonoBehaviour, Health
         if(_currentHealth <= 0)
         {
             _soundManager.PlayPlayerDie();
-            GameManager.GameOver();
+            gameManager.GameOver();
         }
     }
 
