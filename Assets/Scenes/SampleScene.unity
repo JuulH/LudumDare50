@@ -20428,7 +20428,7 @@ MonoBehaviour:
   maxRepairUpgrades: 999
   weaponUpgradeCost: 10
   speedUpgradeCost: 3
-  fortifyUpgradeCost: 1
+  fortifyUpgradeCost: 3
   repairUpgradeCost: 1
   recoverUpgradeCost: 1
   weaponUpgradeCostContainer: {fileID: 870344542}
