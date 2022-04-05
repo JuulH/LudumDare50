@@ -20037,12 +20037,12 @@ MonoBehaviour:
   repairUpgradeButton: {fileID: 870344544}
   recoverUpgradeButton: {fileID: 870344543}
   maxWeaponUpgrades: 2
-  maxSpeedUpgrades: 3
+  maxSpeedUpgrades: 6
   maxFortifyUpgrades: 3
   maxRecoverUpgrades: 999
   maxRepairUpgrades: 999
-  weaponUpgradeCost: 3
-  speedUpgradeCost: 2
+  weaponUpgradeCost: 10
+  speedUpgradeCost: 3
   fortifyUpgradeCost: 1
   repairUpgradeCost: 1
   recoverUpgradeCost: 1
@@ -21266,7 +21266,7 @@ RectTransform:
   m_GameObject: {fileID: 1506066975}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1568849676}
   m_RootOrder: 1
@@ -21448,7 +21448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -88, y: -53}
+  m_AnchoredPosition: {x: -95.2, y: -53}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1613251273
