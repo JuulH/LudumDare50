@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _playerGun;
     [SerializeField] private SpriteRenderer activeGunSprite;
     [SerializeField] private Sprite[] weaponSprites;
+    [SerializeField] private float[] weaponCooldowns;
 
     public GameObject house;
     private HouseHealth _houseHealth;
@@ -153,7 +154,7 @@ public class GameManager : MonoBehaviour
         soundManager.PlayerUpgradeBuy();
         if (_weaponUpgrades < maxWeaponUpgrades)
         {
-            _playerAttack.attackCooldown -= .05f;
+            _playerAttack.attackCooldown = weaponCooldowns[_weaponUpgrades];
             RemoveCoins(weaponUpgradeCostContainer.Cost());
             _weaponUpgrades += 1;
             activeGunSprite.sprite = weaponSprites[_weaponUpgrades];
