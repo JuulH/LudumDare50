@@ -3663,6 +3663,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1178711838, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1949692990, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: _screenShake
       value: 
@@ -20011,15 +20015,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 25
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f984e92f195a9484393c46a0aaf64517, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 6.9375, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1174364569

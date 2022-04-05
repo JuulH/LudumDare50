@@ -18,7 +18,6 @@ public class OldManDialogue : MonoBehaviour
     private void Start()
     {
         possibleDialogues = dialogues;
-        randomDialogue();
     }
 
     private void Update()
