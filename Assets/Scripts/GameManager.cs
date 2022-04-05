@@ -154,7 +154,7 @@ public class GameManager : MonoBehaviour
         soundManager.PlayerUpgradeBuy();
         if (_weaponUpgrades < maxWeaponUpgrades)
         {
-            _playerAttack.attackCooldown = weaponCooldowns[_weaponUpgrades];
+            _playerAttack.attackCooldown = weaponCooldowns[_weaponUpgrades + 1];
             RemoveCoins(weaponUpgradeCostContainer.Cost());
             _weaponUpgrades += 1;
             activeGunSprite.sprite = weaponSprites[_weaponUpgrades];

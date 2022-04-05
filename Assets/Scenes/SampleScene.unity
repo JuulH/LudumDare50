@@ -3668,6 +3668,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1645294500}
     - target: {fileID: 1949692990, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
+      propertyPath: attackCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949692990, guid: d959f335e73ebae4fa23db9284522a29, type: 3}
       propertyPath: miniGunProjectileSpawnPos
       value: 
       objectReference: {fileID: 458830261}
@@ -20018,13 +20022,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1631080874}
-  _playerStartPos: {x: -4.45, y: 1.9, z: 0}
+  _playerStartPos: {x: -1.16, y: -2, z: 0}
   _playerGun: {fileID: 1565740302}
   activeGunSprite: {fileID: 224408348}
   weaponSprites:
   - {fileID: -6911898592872783027, guid: 013060993ecb71540a73cd0080344015, type: 3}
   - {fileID: 4852167336598282744, guid: 8eaa64598f1e7f143a6eb2818fe7fc53, type: 3}
   - {fileID: 1929223289967640128, guid: 8eaa64598f1e7f143a6eb2818fe7fc53, type: 3}
+  weaponCooldowns:
+  - 0.5
+  - 0.3
+  - 0.2
   house: {fileID: 1178641306}
   coinsText: {fileID: 352141058}
   scoreText: {fileID: 857430404}
