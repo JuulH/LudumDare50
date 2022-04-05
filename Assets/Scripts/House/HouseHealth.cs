@@ -7,6 +7,7 @@ public class HouseHealth : MonoBehaviour, Health
     public float maxHealth = 100;
     [SerializeField] private UIManager uiManager;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private float houseArmorModifier = 0.5f;
     public float _currentHealth;
 
     private SoundManager _soundManager;
@@ -27,7 +28,8 @@ public class HouseHealth : MonoBehaviour, Health
 
     public void TakeDamage(float damage)
     {
-        _currentHealth -= damage;
+        var damageAfterAmor = houseArmorModifier * damage;
+        _currentHealth -= damageAfterAmor;
         uiManager.SetHouseCurrentHealth(_currentHealth);
         _screenShake.ShakeCamera(0.5f, 0.25f);
         if (_currentHealth <= 0)
@@ -41,6 +43,11 @@ public class HouseHealth : MonoBehaviour, Health
     {
         uiManager.SetHouseMaxHealth(maxHealth);
         uiManager.SetHouseCurrentHealth(_currentHealth);
+    }
+
+    public void increaseHealthBarSize(float percentageToIncreaseBy)
+    {
+        uiManager.IncreaseHouseHealthBarSize(percentageToIncreaseBy);
     }
 
     public void ResetHealth()

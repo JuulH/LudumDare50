@@ -24,4 +24,9 @@ public class UIManager : MonoBehaviour
     {
         playerHealthBar.CurrentHealth = value;
     }
+
+    public void IncreaseHouseHealthBarSize(float percentageToIncreaseBy)
+    {
+        houseHealthBar.IncreaseSizeBy(percentageToIncreaseBy);
+    }
 }

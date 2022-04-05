@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
         soundManager.PlayerUpgradeBuy();
         if (_speedUpgrades < maxSpeedUpgrades)
         {
-            _playerMovement.speed += 1;
+            _playerMovement.speed += 0.5f;
             RemoveCoins(speedUpgradeCostContainer.Cost());
         }
 
@@ -172,7 +172,8 @@ public class GameManager : MonoBehaviour
         soundManager.PlayerUpgradeBuy();
         if (_fortifyUpgrades < maxFortifyUpgrades)
         {
-            _houseHealth.maxHealth += 100f;
+            _houseHealth.maxHealth += 50f;
+            _houseHealth.UpdateHealthBar();
             RemoveCoins(fortifyUpgradeCostContainer.Cost());
         }
 

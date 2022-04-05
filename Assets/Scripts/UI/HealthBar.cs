@@ -18,4 +18,9 @@ public class HealthBar : MonoBehaviour
     {
         set => healthBarImage.fillAmount = value / MaxHealth;
     }
+
+    public void IncreaseSizeBy(float percentageToIncreaseBy)
+    {
+        // todo
+    }
 }
