@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Sprite[] weaponSprites;
     [SerializeField] private float[] weaponCooldowns;
 
+    public GameObject sleepingDog;
+
     public GameObject house;
     private HouseHealth _houseHealth;
 
@@ -108,6 +110,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        player.SetActive(true);
+        sleepingDog.SetActive(false);
         _playerGun.SetActive(true);
         player.transform.position = _playerStartPos;
         inGameCanvas.SetActive(true);
