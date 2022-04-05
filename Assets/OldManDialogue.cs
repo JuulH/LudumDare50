@@ -39,7 +39,6 @@ public class OldManDialogue : MonoBehaviour
 
     private void randomDialogue()
     {
-        Debug.Log(chosenSprite);
         chosenSprite = Random.Range(0, possibleDialogues.Count-1);
         if(prevSprite == chosenSprite)
         {
@@ -52,7 +51,6 @@ public class OldManDialogue : MonoBehaviour
                 chosenSprite++;
             }
         }
-        Debug.Log("changed");
         spriteRenderer.sprite = dialogues[chosenSprite];
         prevSprite = chosenSprite;
     }
