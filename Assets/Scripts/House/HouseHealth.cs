@@ -45,7 +45,7 @@ public class HouseHealth : MonoBehaviour, Health
         uiManager.SetHouseCurrentHealth(_currentHealth);
     }
 
-    public void increaseHealthBarSize(float percentageToIncreaseBy)
+    public void IncreaseHealthBarSize(float percentageToIncreaseBy)
     {
         uiManager.IncreaseHouseHealthBarSize(percentageToIncreaseBy);
     }

@@ -174,7 +174,9 @@ public class GameManager : MonoBehaviour
         if (_fortifyUpgrades < maxFortifyUpgrades)
         {
             _houseHealth.maxHealth += 50f;
+            _houseHealth.RepairHealth(50);
             _houseHealth.UpdateHealthBar();
+            _houseHealth.IncreaseHealthBarSize(0.1f);
             RemoveCoins(fortifyUpgradeCostContainer.Cost());
         }
 
