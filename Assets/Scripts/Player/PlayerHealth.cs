@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour, Health
     [SerializeField] private GameObject weaponAttachment;
     [SerializeField] private GameObject playerDeath;
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
+    [SerializeField] private GameObject shadow;
     public float _currentHealth;
     public bool _isDead;
 
@@ -51,9 +52,10 @@ public class PlayerHealth : MonoBehaviour, Health
             _playerMovementController.enabled = false;
             _playerMovementController.dir = Vector2.zero;
             GetComponent<SpriteRenderer>().enabled = false;
+            shadow.SetActive(false);
             GameObject createdDeathAnimation = Instantiate(playerDeath, transform.position, transform.rotation, transform);
             cinemachineVirtualCamera.LookAt = createdDeathAnimation.transform;
-
+            
             _soundManager.PlayPlayerDie();
             _isDead = true;
             StartCoroutine(StartGameOver(3));
